@@ -1,0 +1,282 @@
+*{padding:0;margin:0;}
+html{width:100%;height: 100%;}
+body{
+	width:100%;
+    height: 100%;
+    background: image_url('sign_bg.png')  no-repeat;
+    background-size: 100% 100%;
+    font-size: 62.5%;
+    font-family: "å¾®è½¯é›…é»‘";
+    position: relative;
+}
+.lf{
+    float: left;
+}
+.rt{
+    float: right;
+}
+.sign_wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.logo{
+    width: 8rem;
+    height:2rem;
+    margin:1.6rem 0 0 1.2rem;
+
+}
+.logo img{
+    width:100%;
+    height: 100%;
+}
+.sign_title{
+	width: 100%;
+	margin:4rem 0 0.7rem 0;
+}
+.sign_title img,
+.sign_line img{
+	display: block;
+	margin:0 auto;
+	width:16rem;
+}
+.sign_line{
+	width: 100%;
+	margin-bottom: 1.4rem;
+}
+.sign_line img{
+	width:19rem;
+}
+.sign_text{
+	font-size:1rem;
+	text-align: center;
+	color:#fff;
+}
+.sign_text p{
+	line-height: 2rem;
+	margin-bottom: 0.5rem;
+}
+.sign_form{
+	width:14rem;
+	margin:4.6rem auto 3rem auto;
+}
+.sign_term,
+.sign_button{
+	width:100%;
+	height:2.4rem;
+	border:0.08rem solid #9696a1;
+	-webkit-border-radius: 0.4rem;
+	-moz-border-radius: 0.4rem;
+	-ms-border-radius: 0.4rem;
+	-o-border-radius: 0.4rem;
+	border-radius: 0.4rem;
+	margin-bottom: 1.1rem;
+}
+.sign_term label{
+	width:1.2rem;
+	height: 1.4rem;
+	float: left;
+	margin:0.5rem 0.7rem 0.5rem 0.9rem;
+}
+.sign_term label.sign_name{
+	background: image_url('name.png') no-repeat;
+	background-size: 100% 100%;
+}
+.sign_term label.sign_phone{
+	background: image_url('phone.png') no-repeat;
+	background-size: 100% 100%;
+	width:1rem;
+	margin:0.5rem 0.8rem 0.5rem 1rem;
+}
+.sign_term input{
+	height: 2.4rem;
+	width: 10rem;
+	border:none;
+	background: transparent;
+	outline: none;
+	color: #fff;
+}
+.sign_button{
+	height: 2.5rem;
+	overflow: hidden;
+	background:rgba(255,255,255,0.6);
+}
+.sign_button button{
+	width:100%;
+	height: 100%;
+	background: transparent;
+	border:none;
+	outline: none;
+	-webkit-border-radius: 0.3rem;
+	-moz-border-radius: 0.3rem;
+	-ms-border-radius: 0.3rem;
+	-o-border-radius: 0.3rem;
+	border-radius: 0.3rem;
+	color: #fff;
+	font-size: 1rem;
+}
+
+.sign_term input::input-placeholder {
+    color: #fff;
+}
+ 
+.sign_term input::-webkit-input-placeholder {
+    color: #fff;
+}
+ 
+.sign_term input:-ms-input-placeholder {
+    color: #fff;
+}
+ 
+.sign_term input:-moz-placeholder {
+    color: #fff;
+}
+ 
+.sign_term input::-moz-placeholder {
+   color: #fff;
+}
+.sign_welcome{
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+}
+.sign_welcome i{
+	opacity:0.6;
+	margin:0 0.3rem;
+}
+.sign_bg{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.6);
+}
+.sign_tk{
+	position: fixed;
+	left: 50%;
+	top:50%;
+	width: 12rem;
+	height:10rem;
+	margin-left: -6rem;
+	margin-top: -6rem; 
+	background: #fff;
+	-webkit-border-radius: 0.6rem;
+	-moz-border-radius: 0.6rem;
+	-ms-border-radius: 0.6rem;
+	-o-border-radius: 0.6rem;
+	border-radius: 0.6rem;
+}
+.sign_suc{
+	width: 100%;
+	position: relative;
+	padding-top:2rem;
+}
+.suc_title{
+	width: 130%;
+	height: 3.8rem;
+	background: image_url('suc_title.png') no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	left: -15%;
+	top:-2rem;
+}
+.sign_con{
+	width: 10rem;
+	margin:0 auto;
+	text-align: center;
+	font-size:1.1rem;
+	line-height: 2rem;
+	padding:1.5rem 0 2rem 0;
+}
+.sign_con p{
+	letter-spacing:0.2rem;
+}
+.sign_close{
+	position: absolute;
+	width: 1.4rem;
+	height: 1.4rem;
+	left:50%;
+	bottom:-4rem;
+	margin-left: -0.7rem;
+	background: image_url('close.png') no-repeat;
+	background-size: 100% 100%;
+	padding:0.1rem;
+	box-sizing: border-box;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+.sign_close:hover{
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.unsuc_title{
+	width: 100%;
+	height: 2.6rem;
+	background: #ead190;
+	line-height: 2.6rem;
+	text-align: center;
+	color: #fff;
+	font-size: 1.2rem;
+	-webkit-border-radius: 0.4rem 0.4rem 0 0;
+	-moz-border-radius: 0.4rem 0.4rem 0 0;
+	-ms-border-radius: 0.4rem 0.4rem 0 0;
+	border-radius: 0.4rem 0.4rem 0 0;
+	position: absolute;
+	left: 0;
+	top:0;
+}
+@media screen and (max-height: 568px) {
+	.logo {
+	    width: 7rem;
+	    height: 1.8rem;
+	    margin: 1.4rem 0 0 1rem;
+	}
+	.sign_title {
+	    margin: 3rem 0 0.7rem 0;
+	}
+	.sign_title img{
+		width: 14rem;
+	}
+	 .sign_line img{
+		width: 16rem;
+	}
+	.sign_text p{margin-bottom: 0.3rem}
+	.sign_form{
+		margin:3rem auto 2.5rem auto;
+		width: 13rem;
+	}
+	.sign_term, .sign_button{height: 2.2rem;}
+	.sign_term label{margin: 0.4rem 0.7rem 0.4rem 0.9rem;}
+	.sign_welcome{
+		font-size:0.9rem;
+	}
+	.sign_welcome i {
+	    opacity: 0.6;
+	    margin: 0 0.2rem;
+	}
+}
+@media screen and (min-height: 700px){
+	.logo {
+   		margin:2rem 0 0 1.2rem;
+	}
+	.sign_title {
+	    width: 100%;
+	    margin: 5rem 0 0.9rem 0;
+	}
+	.sign_line {
+	    width: 100%;
+	    margin-bottom: 2rem;
+	}
+	.sign_form {
+	    width: 15rem;
+	    margin: 4.6rem auto 4rem auto;
+	}
+	.sign_term input{
+		width: 12rem;
+	}
+}
