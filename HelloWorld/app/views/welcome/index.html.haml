@@ -1,0 +1,83 @@
+.sign_wrap
+  .logo
+    / %img{:src => "#{image_path('logo.png')}"}
+  .sign_title
+    / %img{:src => "#{image_path('title.png')}"}
+  .sign_line
+    / %img{:src => "#{image_path('line.png')}"}
+  .sign_text
+    %p 2018年4月10日
+    %p 西电Node区块链签到页面
+  = form_tag signin_path, :method => 'post', :class => 'sign_form', :id =>'signForm', :remote => true do
+    .sign_term
+      = label_tag :phone, '', {class: "sign_phone"}
+      = text_field_tag :phone, '', :placeholder => "请输入手机号"
+      .tipinfo
+    .sign_button
+      %button#sign_button 签到
+/ 遮罩背景
+.sign_bg{:style => "display: none"}
+/ 签到成功弹框
+#suc_tk.sign_tk{:style => "display: none"}
+  .sign_suc
+    .suc_title
+    .sign_con
+      %p 恭喜您
+      %p 今日签到成功
+    #suc_close.sign_close
+/ 签到失败弹框
+#unsuc_tk.sign_tk{:style => "display: none"}
+  .sign_suc
+    .unsuc_title 签到失败
+    .sign_con
+      %p 可能网络错误
+      %p 建议您再试一次
+    #unsuc_close.sign_close
+:javascript
+  $(document).ready(function(){
+  /*签到成功弹框关闭*/
+    $("#signForm").bind('ajax:success', null, function(evt, data, status, xhr) {
+      $(".sign_bg").show()
+      $("#suc_tk").show()
+    });
+    $("#signForm").on('ajax:error', function(event, xhr, status, error) {
+      console.log("sorry mate!");
+      $(".sign_bg").show()
+      $("#unsuc_tk").show()
+    });
+
+    $("#suc_close").click(function(){
+      $("#suc_tk,.sign_bg").fadeOut(400);
+    });
+    /*签到失败弹框关闭*/
+    $("#unsuc_close").click(function(){
+      $("#unsuc_tk,.sign_bg").fadeOut(400);
+    });
+    $("#signForm").validate({
+        onkeyup:false,
+        //设置验证规则
+        rules: {
+            // "name": {
+            //     required: true,
+            // },
+            "phone": {
+                required: true,
+                isMobile: true
+            }
+        },
+        //设置错误信息
+        messages: {
+            // "name": {
+            //     required: "姓名不能为空"
+            // },
+            "phone": {
+                required: "手机号码不能为空",
+                isMobile: "请输入有效的手机号码"
+            }
+        },
+        errorElement:"font",
+        errorPlacement: function(error, element){
+            error.appendTo(element.parent().find(".tipinfo"));
+        },success:"valid"
+    });
+  });

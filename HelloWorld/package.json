@@ -1,5 +1,20 @@
 {
-  "name": "HelloWorld",
+  "name": "hello",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "commander": "^2.15.1",
+    "qweb3": "^0.7.6"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "contracts.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
