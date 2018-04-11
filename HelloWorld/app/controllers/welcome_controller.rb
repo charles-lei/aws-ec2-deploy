@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     student = Student.find_by(:phone => params[:phone])
     if student
       p student
-      course_sign = student&.course_signs&.find_by(:id => Course::CURRENT_COURSE)
+      course_sign = student&.course_signs&.find_by(:course_id => Course::CURRENT_COURSE)
       unless course_sign
         p "node contracts.js #{student.wallet_address} #{send_nodes_count}"
         result = system "node contracts.js #{student.wallet_address} #{send_nodes_count}"
