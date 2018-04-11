@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
         result = system "node contracts.js #{student.wallet_address} #{send_nodes_count}"
         p result
         if result
-          CourseSign.create(student: student, course_id: Course::CURRENT_COURSE)
+          CourseSign.create(student: student, course_id: Course::CURRENT_COURSE, received_nodes: send_nodes_count)
         else
           render :json => { data: 'fail'}, status: 400
           return
@@ -27,5 +27,4 @@ class WelcomeController < ApplicationController
     end
     render :json => { data: 'fail'}, status: 400
   end
-
 end
