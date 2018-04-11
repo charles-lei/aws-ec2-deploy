@@ -9,19 +9,21 @@ class WelcomeController < ApplicationController
     send_nodes_count = 90
     student = Student.find_by(:phone => params[:phone])
     if student
-       p student
-       course_sign = student&.course_signs&.find_by(:id => Course::CURRENT_COURSE)
-       unless course_sign
+      p student
+      course_sign = student&.course_signs&.find_by(:id => Course::CURRENT_COURSE)
+      unless course_sign
+        p "node contracts.js #{student.wallet_address} #{send_nodes_count}"
         result = system "node contracts.js #{student.wallet_address} #{send_nodes_count}"
+        p result
         if result
           CourseSign.create(student: student, course_id: Course::CURRENT_COURSE)
         else
           render :json => { data: 'fail'}, status: 400
           return
         end
-       end
-       render :json => { data: 'success'}, status: 200
-       return
+      end
+      render :json => { data: 'success'}, status: 200
+      return
     end
     render :json => { data: 'fail'}, status: 400
   end
