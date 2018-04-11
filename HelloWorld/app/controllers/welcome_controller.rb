@@ -12,7 +12,7 @@ class WelcomeController < ApplicationController
        p student
        course_sign = student&.course_signs&.find_by(:id => Course::CURRENT_COURSE)
        unless course_sign
-        result = system "node contract.js #{student.wallet_address} #{send_nodes_count}"
+        result = system "node contracts.js #{student.wallet_address} #{send_nodes_count}"
         if result
           CourseSign.create(student: student, course_id: Course::CURRENT_COURSE)
         else
