@@ -21,7 +21,7 @@ jQuery.validator.addMethod("isEmail", function(value, element) {
 //手机号码验证       
 jQuery.validator.addMethod("isMobile", function(value, element) {       
     var length = value.length;   
-    var mobile = /(^(13|14|15|18)\d{9}$)/;     
+    var mobile = /(^(13|14|15|17|18)\d{9}$)/;     
     return this.optional(element) || (length == 11 && mobile.test(value));       
 }, "请正确填写您的手机号码");       
      

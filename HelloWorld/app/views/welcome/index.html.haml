@@ -1,13 +1,14 @@
 .sign_wrap
   .logo
-    %img{:src => "#{image_path('node_logo.png')}"}
+    %p.title NODE区块链加速器
+    / %img{:src => "#{image_path('node_logo.png')}"}
   .sign_title
     %img{:src => "#{image_path('logo.png')}"}
   .sign_line
     / %img{:src => "#{image_path('line.png')}"}
   .sign_text
     %p.title 区块链技术原理与开发实战
-    %p.desc 输入手机号码，点击签到领取NODE币
+    %p.desc 输入手机号码，点击签到领取NODE积分
   = form_tag signin_path, :method => 'post', :class => 'sign_form', :id =>'signForm', :remote => true do
     .sign_term
       = label_tag :phone, '', {class: "sign_phone"}

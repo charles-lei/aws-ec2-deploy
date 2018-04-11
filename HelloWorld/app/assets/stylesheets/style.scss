@@ -21,10 +21,10 @@ body{
     overflow: hidden;
 }
 .logo{
-    width: 10rem;
     height: 1rem;
     margin:1.6rem 0 0 1.2rem;
-
+    font-size: 1.2rem;
+    color: lightblue;
 }
 .logo img{
     width:100%;
@@ -240,7 +240,6 @@ body{
 }
 @media screen and (max-height: 568px) {
 	.logo {
-	    width: 7rem;
 	    height: 1rem;
 	    margin: 1.4rem 0 0 1rem;
 	}
