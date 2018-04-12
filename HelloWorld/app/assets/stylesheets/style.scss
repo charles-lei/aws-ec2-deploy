@@ -6,7 +6,7 @@ body{
     background: image_url('sign_bg.png')  no-repeat;
     background-size: 100% 100%;
     font-size: 62.5%;
-    font-family: "å¾®è½¯é›…é»‘";
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
     position: relative;
 }
 .lf{
@@ -164,9 +164,9 @@ body{
 	position: fixed;
 	left: 50%;
 	top:50%;
-	width: 12rem;
+	width: 14rem;
 	height:10rem;
-	margin-left: -6rem;
+	margin-left: -7rem;
 	margin-top: -6rem; 
 	background: #fff;
 	-webkit-border-radius: 0.6rem;
@@ -180,22 +180,37 @@ body{
 	position: relative;
 	padding-top:2rem;
 }
+.sign_unsuc{
+	width: 100%;
+	position: relative;
+	padding-top: 4.5rem;
+}
 .suc_title{
-	width: 130%;
-	height: 3.8rem;
-	background: image_url('suc_title.png') no-repeat;
+	width: 100%;
+	line-height: 2.6rem;
+	border-radius: 0.4rem 0.4rem 0 0;
+	font-size: 1.2rem;
+	height: 2.6rem;
+	background: #3685e8;
 	background-size: 100% 100%;
 	position: absolute;
-	left: -15%;
 	top:-2rem;
+	text-align: center;
+}
+#unsuc_sub_title_desc {
+	font-size: 12px;
+}
+#suc_sub_title {
+	font-size: 16px;
+	margin: 0 auto;
 }
 .sign_con{
-	width: 10rem;
+	// width: 10rem;
 	margin:0 auto;
 	text-align: center;
-	font-size:1.1rem;
+	font-size:1rem;
 	line-height: 2rem;
-	padding:1.5rem 0 2rem 0;
+	// padding:1.5rem 0 2rem 0;
 }
 .sign_con p{
 	letter-spacing:0.2rem;
@@ -205,7 +220,7 @@ body{
 	width: 1.4rem;
 	height: 1.4rem;
 	left:50%;
-	bottom:-4rem;
+	bottom:-5rem;
 	margin-left: -0.7rem;
 	background: image_url('close.png') no-repeat;
 	background-size: 100% 100%;
@@ -225,7 +240,7 @@ body{
 .unsuc_title{
 	width: 100%;
 	height: 2.6rem;
-	background: #ead190;
+	background: #3685e8;
 	line-height: 2.6rem;
 	text-align: center;
 	color: #fff;

@@ -21,28 +21,56 @@
 / 签到成功弹框
 #suc_tk.sign_tk{:style => "display: none"}
   .sign_suc
-    .suc_title
+    .suc_title 签到成功
     .sign_con
       %p 恭喜您
-      %p 今日签到成功
+      %p 获得400 NODE积分
+      %a#wallet{href: 'https://explorer.qtum.org/address/'} 点此查看
     #suc_close.sign_close
 / 签到失败弹框
 #unsuc_tk.sign_tk{:style => "display: none"}
-  .sign_suc
+  .sign_unsuc
     .unsuc_title 签到失败
     .sign_con
-      %p 可能网络错误
-      %p 建议您再试一次
+      %p#unsuc_sub_title
+      %p#unsuc_sub_title_desc
     #unsuc_close.sign_close
 :javascript
   $(document).ready(function(){
   /*签到成功弹框关闭*/
-    $("#signForm").bind('ajax:success', null, function(evt, data, status, xhr) {
-      $(".sign_bg").show()
-      $("#suc_tk").show()
+    $("#signForm").bind('ajax:success', function() {
+      var result = event.detail[0].result
+      var message = event.detail[0].message
+      var wallet_address = event.detail[0].wallet_address
+      if(result == 0) {
+        $("#wallet").attr('href', 'https://explorer.qtum.org/address/' + wallet_address)
+        $(".sign_bg").show()
+        $("#suc_tk").show()
+      } else {
+        switch(message) {
+          case 'already_signed':
+            $('#unsuc_sub_title').html('请勿重复签到')
+            $('#unsuc_sub_title_desc').html('')
+            break;
+          case 'send_node_failure':
+            $('#unsuc_sub_title').html('无法获取NODE积分')
+            $('#unsuc_sub_title_desc').html('请联系课程助教')
+            break;
+          case 'no_wallet_address':
+            $('#unsuc_sub_title').html('手机号码无效')
+            $('#unsuc_sub_title_desc').html('请联系课程助教')
+            break;
+          default:
+            break;
+        }
+        $(".sign_bg").show()
+        $("#unsuc_tk").show()
+      }
     });
     $("#signForm").on('ajax:error', function(event, xhr, status, error) {
       console.log("sorry mate!");
+      $('#unsuc_sub_title').html('签到失败')
+      $('#unsuc_sub_title_desc').html('请联系课程助教')
       $(".sign_bg").show()
       $("#unsuc_tk").show()
     });

@@ -6,25 +6,28 @@ class WelcomeController < ApplicationController
     # params[:time].to_date
   end
   def signin
-    send_nodes_count = 90
+    result, message = 0, 'success'
+    send_nodes_count = 400
     student = Student.find_by(:phone => params[:phone])
-    if student
+
+    if student && student.wallet_address.present?
       p student
       course_sign = student&.course_signs&.find_by(:course_id => Course::CURRENT_COURSE)
-      unless course_sign
+      if course_sign
+        result, message = 1, 'already_signed'
+      else
         p "node contracts.js #{student.wallet_address} #{send_nodes_count}"
-        result = system "node contracts.js #{student.wallet_address} #{send_nodes_count}"
-        p result
-        if result
+        sender_result = system "node contracts.js #{student.wallet_address} #{send_nodes_count}"
+        p sender_result
+        if sender_result
           CourseSign.create(student: student, course_id: Course::CURRENT_COURSE, received_nodes: send_nodes_count)
         else
-          render :json => { data: 'fail'}, status: 400
-          return
+          result, message = 1, 'send_node_failure'
         end
       end
-      render :json => { data: 'success'}, status: 200
-      return
+    else
+      result, message = 1, 'no_wallet_address'
     end
-    render :json => { data: 'fail'}, status: 400
+    render :json => { result: result, message: message, wallet_address: student&.wallet_address}, status: 200
   end
 end
