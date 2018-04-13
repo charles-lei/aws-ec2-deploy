@@ -1,0 +1,26 @@
+%script{:src => "http://static.runoob.com/assets/qrcode/qrcode.min.js", :type => "text/javascript"}
+%input#text{:style => "width:80%; display: none", :type => "text", :value => "http://node.meowtechnology.com?timestamp=#{@timestamp}"}/
+%br/
+
+%div{:style => "margin: 0 auto; text-align: center; margin-top: 10rem;"}
+  #qrcode{:style => "width:200px; height:200px; margin-top:15px; margin: 0 auto; text-align: center;"}
+:javascript
+  setTimeout("self.location.reload();",1000 * 40);
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    width : 200,
+    height : 200
+  });
+  
+  function makeCode () { 
+    var elText = document.getElementById("text");
+    
+    if (!elText.value) {
+      alert("Input a text");
+      elText.focus();
+      return;
+    }
+    
+    qrcode.makeCode(elText.value);
+  }
+  
+  makeCode();

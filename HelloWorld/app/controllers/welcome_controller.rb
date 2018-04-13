@@ -1,10 +1,18 @@
 class WelcomeController < ApplicationController
   def index
-    # if params[:time].empty?
-    #   render 
-    # end
-    # params[:time].to_date
+    if params[:timestamp].blank? || DateTime.strptime(params[:timestamp],'%s') + 40.seconds > Time.now
+      redirect_to tip_path 
+    end
   end
+
+  def tip
+
+  end
+
+  def qcode
+    @timestamp = Time.now.to_i
+  end
+
   def signin
     result, message = 0, 'success'
     send_nodes_count = 400
@@ -30,4 +38,5 @@ class WelcomeController < ApplicationController
     end
     render :json => { result: result, message: message, wallet_address: student&.wallet_address}, status: 200
   end
+
 end
