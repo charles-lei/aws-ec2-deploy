@@ -282,7 +282,8 @@ const contractAbi = [
 const contract = new Contract(rpcAddress, contractAddress, contractAbi)
 contract.send('transfer', {
     methodArgs: [address, Number(send_nodes_count)*100000000],
-    senderAddress: 'QV4PR5nre19w2NNVXZLCBPJYDosob92fhq'
+    senderAddress: 'QV4PR5nre19w2NNVXZLCBPJYDosob92fhq',
+    gasPrice: 0.0000002
     //testnet: qLjv8pnuuccSHAmAHfB1s8uT5Ru7xNnK9x
     //mainnet: QV4PR5nre19w2NNVXZLCBPJYDosob92fhq
   }).catch(function(error) {
