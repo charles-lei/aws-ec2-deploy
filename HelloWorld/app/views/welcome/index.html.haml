@@ -25,7 +25,7 @@
     .sign_con
       %p 恭喜您
       %p 获得350 NODE积分
-      %a#wallet{href: 'https://explorer.qtum.org/address/'} 点此查看
+      / %a#wallet{href: 'https://explorer.qtum.org/address/'} 点此查看
     #suc_close.sign_close
 / 签到失败弹框
 #unsuc_tk.sign_tk{:style => "display: none"}
@@ -43,7 +43,7 @@
       var message = event.detail[0].message
       var wallet_address = event.detail[0].wallet_address
       if(result == 0) {
-        $("#wallet").attr('href', 'https://explorer.qtum.org/address/' + wallet_address)
+        / $("#wallet").attr('href', 'https://explorer.qtum.org/address/' + wallet_address)
         $(".sign_bg").show()
         $("#suc_tk").show()
       } else {
