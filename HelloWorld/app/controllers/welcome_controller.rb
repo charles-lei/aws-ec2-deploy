@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    if params[:timestamp].blank? || DateTime.strptime(params[:timestamp],'%s') + 40.seconds > DateTime.now
+    if params[:timestamp].blank? || DateTime.strptime(params[:timestamp],'%s').to_time + 40.seconds > DateTime.now.to_time
       redirect_to tip_path 
     end
   end
