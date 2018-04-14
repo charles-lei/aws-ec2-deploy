@@ -287,6 +287,7 @@ contract.send('transfer', {
     //testnet: qLjv8pnuuccSHAmAHfB1s8uT5Ru7xNnK9x
     //mainnet: QV4PR5nre19w2NNVXZLCBPJYDosob92fhq
   }).catch(function(error) {
+    console.log(error)
    process.exit(1)
 });
 
