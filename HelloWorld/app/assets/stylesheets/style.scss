@@ -11,6 +11,9 @@ body{
 	 background: image_url('sign_bg.png')  no-repeat;
    background-size: 100% 100%;
 }
+.container {
+	height: 100%;
+}
 .lf{
     float: left;
 }
@@ -222,7 +225,7 @@ body{
 	width: 1.4rem;
 	height: 1.4rem;
 	left:50%;
-	bottom:-5rem;
+	bottom:-5.5rem;
 	margin-left: -0.7rem;
 	background: image_url('close.png') no-repeat;
 	background-size: 100% 100%;
