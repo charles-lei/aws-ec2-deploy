@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
 
   def signin
     result, message = 0, 'success'
-    send_nodes_count = 400
+    send_nodes_count = 350
     student = Student.find_by(:phone => params[:phone])
 
     if student && student.wallet_address.present?
