@@ -1,0 +1,174 @@
+# Logfile created on 2018-04-16 16:34:17 +0800 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:34:17 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [06c825af] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [06c825af] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f2b90ab3] Running /usr/bin/env #<StringIO:0x007fbdcc057918> /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [f2b90ab3] Command: /usr/bin/env #<StringIO:0x007fbdcc057918> /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [7e360a64] Running /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [7e360a64] Command: /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [21f72d8a] Running /usr/bin/env git ls-remote git@github.com:charles-lei/aws-ec2-deploy.git HEAD as ubuntu@node.meowtechnology.com
+ DEBUG [21f72d8a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git ls-remote git@github.com:charles-lei/aws-ec2-deploy.git HEAD )
+  INFO [35f81d13] Running /usr/bin/env mkdir -p /home/ubuntu/aws-ec2-deploy/shared /home/ubuntu/aws-ec2-deploy/releases as ubuntu@node.meowtechnology.com
+ DEBUG [35f81d13] Command: /usr/bin/env mkdir -p /home/ubuntu/aws-ec2-deploy/shared /home/ubuntu/aws-ec2-deploy/releases
+ DEBUG [c0d4e4a9] Running [ -f /home/ubuntu/aws-ec2-deploy/current/REVISION ] as ubuntu@node.meowtechnology.com
+ DEBUG [c0d4e4a9] Command: [ -f /home/ubuntu/aws-ec2-deploy/current/REVISION ]
+ DEBUG [69a30490] Running /usr/bin/env cat /home/ubuntu/aws-ec2-deploy/current/REVISION 2>/dev/null as ubuntu@node.meowtechnology.com
+ DEBUG [69a30490] Command: /usr/bin/env cat /home/ubuntu/aws-ec2-deploy/current/REVISION 2>/dev/null
+ DEBUG [ae0daf2e] Running [ -f /home/ubuntu/aws-ec2-deploy/repo/HEAD ] as ubuntu@node.meowtechnology.com
+ DEBUG [ae0daf2e] Command: [ -f /home/ubuntu/aws-ec2-deploy/repo/HEAD ]
+  INFO The repository mirror is at /home/ubuntu/aws-ec2-deploy/repo
+ DEBUG [7e78d2c9] Running if test ! -d /home/ubuntu/aws-ec2-deploy/repo; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [7e78d2c9] Command: if test ! -d /home/ubuntu/aws-ec2-deploy/repo; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/repo'" 1>&2; false; fi
+  INFO [c31344e8] Running /usr/bin/env git remote set-url origin git@github.com:charles-lei/aws-ec2-deploy.git as ubuntu@node.meowtechnology.com
+ DEBUG [c31344e8] Command: cd /home/ubuntu/aws-ec2-deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote set-url origin git@github.com:charles-lei/aws-ec2-deploy.git )
+  INFO [94eee19e] Running /usr/bin/env git remote update --prune as ubuntu@node.meowtechnology.com
+ DEBUG [94eee19e] Command: cd /home/ubuntu/aws-ec2-deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [68eab036] Running if test ! -d /home/ubuntu/aws-ec2-deploy/repo; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [68eab036] Command: if test ! -d /home/ubuntu/aws-ec2-deploy/repo; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/repo'" 1>&2; false; fi
+  INFO [e70ffee5] Running /usr/bin/env mkdir -p /home/ubuntu/aws-ec2-deploy/releases/20180416083417 as ubuntu@node.meowtechnology.com
+ DEBUG [e70ffee5] Command: cd /home/ubuntu/aws-ec2-deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env mkdir -p /home/ubuntu/aws-ec2-deploy/releases/20180416083417 )
+  INFO [f6e7c76c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/aws-ec2-deploy/releases/20180416083417 as ubuntu@node.meowtechnology.com
+ DEBUG [f6e7c76c] Command: cd /home/ubuntu/aws-ec2-deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/aws-ec2-deploy/releases/20180416083417 )
+ DEBUG [03fb7935] Running if test ! -d /home/ubuntu/aws-ec2-deploy/repo; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [03fb7935] Command: if test ! -d /home/ubuntu/aws-ec2-deploy/repo; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/repo'" 1>&2; false; fi
+ DEBUG [94ade3df] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@node.meowtechnology.com
+ DEBUG [94ade3df] Command: cd /home/ubuntu/aws-ec2-deploy/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [13afe986] Running if test ! -d /home/ubuntu/aws-ec2-deploy/releases/20180416083417; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/releases/20180416083417'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [13afe986] Command: if test ! -d /home/ubuntu/aws-ec2-deploy/releases/20180416083417; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/releases/20180416083417'" 1>&2; false; fi
+  INFO [c86eeaf6] Running /usr/bin/env echo "" > REVISION as ubuntu@node.meowtechnology.com
+ DEBUG [c86eeaf6] Command: cd /home/ubuntu/aws-ec2-deploy/releases/20180416083417 && /usr/bin/env echo "" > REVISION
+  INFO [baa3e91c] Running /usr/bin/env ln -s /home/ubuntu/aws-ec2-deploy/releases/20180416083417 /home/ubuntu/aws-ec2-deploy/releases/current as ubuntu@node.meowtechnology.com
+ DEBUG [baa3e91c] Command: /usr/bin/env ln -s /home/ubuntu/aws-ec2-deploy/releases/20180416083417 /home/ubuntu/aws-ec2-deploy/releases/current
+  INFO [3e1b3c8c] Running /usr/bin/env mv /home/ubuntu/aws-ec2-deploy/releases/current /home/ubuntu/aws-ec2-deploy as ubuntu@node.meowtechnology.com
+ DEBUG [3e1b3c8c] Command: /usr/bin/env mv /home/ubuntu/aws-ec2-deploy/releases/current /home/ubuntu/aws-ec2-deploy
+ DEBUG [b7cb87e1] Running /usr/bin/env ls -x /home/ubuntu/aws-ec2-deploy/releases as ubuntu@node.meowtechnology.com
+ DEBUG [b7cb87e1] Command: /usr/bin/env ls -x /home/ubuntu/aws-ec2-deploy/releases
+ DEBUG [078258a0] Running if test ! -d /home/ubuntu/aws-ec2-deploy/releases; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/releases'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [078258a0] Command: if test ! -d /home/ubuntu/aws-ec2-deploy/releases; then echo "Directory does not exist '/home/ubuntu/aws-ec2-deploy/releases'" 1>&2; false; fi
+  INFO [743c2f23] Running /usr/bin/env echo "Branch master (at ) deployed as release 20180416083417 by edz" >> /home/ubuntu/aws-ec2-deploy/revisions.log as ubuntu@node.meowtechnology.com
+ DEBUG [743c2f23] Command: cd /home/ubuntu/aws-ec2-deploy/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20180416083417 by edz" >> /home/ubuntu/aws-ec2-deploy/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:41:16 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [cda7234d] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [cda7234d] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:43:26 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b90d9244] Running /usr/bin/env mkdir -p /tmp as ubuntu@example.com
+ DEBUG [b90d9244] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:45:30 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [6e5bada8] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [6e5bada8] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:45:43 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [603fe214] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [603fe214] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:46:55 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [af5bbd26] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [af5bbd26] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:47:56 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [21a5fe56] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [21a5fe56] Command: /usr/bin/env mkdir -p /tmp
+  INFO [21a5fe56] Finished in 0.788 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 0.0%
+  INFO Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 100.0%
+  INFO [096d22b2] Running /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [096d22b2] Command: /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [096d22b2] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [04b39cd3] Running /usr/bin/env git ls-remote git@github.com:charles-lei/aws-ec2-deploy.git HEAD as ubuntu@node.meowtechnology.com
+ DEBUG [04b39cd3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git ls-remote git@github.com:charles-lei/aws-ec2-deploy.git HEAD )
+ DEBUG [04b39cd3] 	Warning: Permanently added 'github.com,52.74.223.119' (RSA) to the list of known hosts.
+ DEBUG [04b39cd3] 	Permission denied (publickey).
+ DEBUG [04b39cd3] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-16 16:50:31 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [15afc094] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [15afc094] Command: /usr/bin/env mkdir -p /tmp
+  INFO [15afc094] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 0.0%
+  INFO Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 100.0%
+  INFO [572d887d] Running /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [572d887d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [572d887d] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [7c9c6db9] Running /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD as ubuntu@node.meowtechnology.com
+ DEBUG [7c9c6db9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD )
+ DEBUG [7c9c6db9] 	0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d	HEAD
+  INFO [7c9c6db9] Finished in 2.348 seconds with exit status 0 (successful).
+  INFO [8698c231] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases as ubuntu@node.meowtechnology.com
+ DEBUG [8698c231] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases
+  INFO [8698c231] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [027f5b97] Running [ -f /home/ubuntu/node_acclerate/current/REVISION ] as ubuntu@node.meowtechnology.com
+ DEBUG [027f5b97] Command: [ -f /home/ubuntu/node_acclerate/current/REVISION ]
+ DEBUG [027f5b97] Finished in 0.123 seconds with exit status 1 (failed).
+ DEBUG [f3780975] Running [ -f /home/ubuntu/node_acclerate/repo/HEAD ] as ubuntu@node.meowtechnology.com
+ DEBUG [f3780975] Command: [ -f /home/ubuntu/node_acclerate/repo/HEAD ]
+ DEBUG [f3780975] Finished in 0.126 seconds with exit status 1 (failed).
+ DEBUG [0ff769ba] Running if test ! -d /home/ubuntu/node_acclerate; then echo "Directory does not exist '/home/ubuntu/node_acclerate'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [0ff769ba] Command: if test ! -d /home/ubuntu/node_acclerate; then echo "Directory does not exist '/home/ubuntu/node_acclerate'" 1>&2; false; fi
+ DEBUG [0ff769ba] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [c9669867] Running /usr/bin/env git clone --mirror https://github.com/charles-lei/aws-ec2-deploy.git /home/ubuntu/node_acclerate/repo as ubuntu@node.meowtechnology.com
+ DEBUG [c9669867] Command: cd /home/ubuntu/node_acclerate && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git clone --mirror https://github.com/charles-lei/aws-ec2-deploy.git /home/ubuntu/node_acclerate/repo )
+ DEBUG [c9669867] 	Cloning into bare repository '/home/ubuntu/node_acclerate/repo'...
+  INFO [c9669867] Finished in 21.694 seconds with exit status 0 (successful).
+ DEBUG [c4821c93] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [c4821c93] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [c4821c93] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [64f7dc70] Running /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git as ubuntu@node.meowtechnology.com
+ DEBUG [64f7dc70] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git )
+  INFO [64f7dc70] Finished in 0.137 seconds with exit status 0 (successful).
+  INFO [9ff46828] Running /usr/bin/env git remote update --prune as ubuntu@node.meowtechnology.com
+ DEBUG [9ff46828] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9ff46828] 	Fetching origin
+  INFO [9ff46828] Finished in 2.235 seconds with exit status 0 (successful).
+ DEBUG [086cfc29] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [086cfc29] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [086cfc29] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [6a9466a2] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180416085035 as ubuntu@node.meowtechnology.com
+ DEBUG [6a9466a2] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180416085035 )
+  INFO [6a9466a2] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [a209f898] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180416085035 as ubuntu@node.meowtechnology.com
+ DEBUG [a209f898] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180416085035 )
+  INFO [a209f898] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [0569b824] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [0569b824] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [0569b824] Finished in 0.125 seconds with exit status 0 (successful).
+ DEBUG [7914e7dd] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@node.meowtechnology.com
+ DEBUG [7914e7dd] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [7914e7dd] 	0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d
+ DEBUG [7914e7dd] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [59bfb7fc] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180416085035; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180416085035'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [59bfb7fc] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180416085035; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180416085035'" 1>&2; false; fi
+ DEBUG [59bfb7fc] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [99ad2480] Running /usr/bin/env echo "0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d" > REVISION as ubuntu@node.meowtechnology.com
+ DEBUG [99ad2480] Command: cd /home/ubuntu/node_acclerate/releases/20180416085035 && /usr/bin/env echo "0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d" > REVISION
+  INFO [99ad2480] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [ceea5892] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/releases/20180416085035 /home/ubuntu/node_acclerate/releases/current as ubuntu@node.meowtechnology.com
+ DEBUG [ceea5892] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/releases/20180416085035 /home/ubuntu/node_acclerate/releases/current
+  INFO [ceea5892] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [0b343510] Running /usr/bin/env mv /home/ubuntu/node_acclerate/releases/current /home/ubuntu/node_acclerate as ubuntu@node.meowtechnology.com
+ DEBUG [0b343510] Command: /usr/bin/env mv /home/ubuntu/node_acclerate/releases/current /home/ubuntu/node_acclerate
+  INFO [0b343510] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [9b4ddf7c] Running /usr/bin/env ls -x /home/ubuntu/node_acclerate/releases as ubuntu@node.meowtechnology.com
+ DEBUG [9b4ddf7c] Command: /usr/bin/env ls -x /home/ubuntu/node_acclerate/releases
+ DEBUG [9b4ddf7c] 	20180416085035
+ DEBUG [9b4ddf7c] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [f7433551] Running if test ! -d /home/ubuntu/node_acclerate/releases; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [f7433551] Command: if test ! -d /home/ubuntu/node_acclerate/releases; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases'" 1>&2; false; fi
+ DEBUG [f7433551] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [b81b4523] Running /usr/bin/env echo "Branch master (at 0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d) deployed as release 20180416085035 by edz" >> /home/ubuntu/node_acclerate/revisions.log as ubuntu@node.meowtechnology.com
+ DEBUG [b81b4523] Command: cd /home/ubuntu/node_acclerate/releases && /usr/bin/env echo "Branch master (at 0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d) deployed as release 20180416085035 by edz" >> /home/ubuntu/node_acclerate/revisions.log
+  INFO [b81b4523] Finished in 0.128 seconds with exit status 0 (successful).

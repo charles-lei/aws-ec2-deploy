@@ -1,0 +1,2 @@
+class CourseSignFailure < ApplicationRecord
+end
