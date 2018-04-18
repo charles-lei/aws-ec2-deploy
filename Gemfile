@@ -43,6 +43,12 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem "capistrano", "~> 3.10", require: false
+  gem 'capistrano-npm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm'
+  gem 'capistrano-npm'
 end
 
 group :development do
