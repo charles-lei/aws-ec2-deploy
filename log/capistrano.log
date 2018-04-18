@@ -172,3 +172,596 @@ and the repository exists.
   INFO [b81b4523] Running /usr/bin/env echo "Branch master (at 0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d) deployed as release 20180416085035 by edz" >> /home/ubuntu/node_acclerate/revisions.log as ubuntu@node.meowtechnology.com
  DEBUG [b81b4523] Command: cd /home/ubuntu/node_acclerate/releases && /usr/bin/env echo "Branch master (at 0b3bc476b5571b36d3c9cd80df9c7ca7ccfb471d) deployed as release 20180416085035 by edz" >> /home/ubuntu/node_acclerate/revisions.log
   INFO [b81b4523] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-18 15:56:42 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8b2ad8b4] Running /usr/bin/env which passenger as ubuntu@node.meowtechnology.com
+ DEBUG [8b2ad8b4] Command: /usr/bin/env which passenger
+ DEBUG [8b2ad8b4] Finished in 0.840 seconds with exit status 1 (failed).
+ DEBUG [b38aaffb] Running [ -d ~/.rvm ] as ubuntu@node.meowtechnology.com
+ DEBUG [b38aaffb] Command: [ -d ~/.rvm ]
+ DEBUG [b38aaffb] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [775f6bed] Running ~/.rvm/bin/rvm version as ubuntu@node.meowtechnology.com
+ DEBUG [775f6bed] Command: ~/.rvm/bin/rvm version
+ DEBUG [775f6bed] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [775f6bed] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [e5702612] Running ~/.rvm/bin/rvm current as ubuntu@node.meowtechnology.com
+ DEBUG [e5702612] Command: ~/.rvm/bin/rvm current
+ DEBUG [e5702612] 	ruby-2.4.1
+ DEBUG [e5702612] Finished in 0.263 seconds with exit status 0 (successful).
+ DEBUG [75f6d0e5] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@node.meowtechnology.com
+ DEBUG [75f6d0e5] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [75f6d0e5] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [75f6d0e5] Finished in 0.405 seconds with exit status 0 (successful).
+  INFO [521d06c1] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [521d06c1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [521d06c1] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 0.0%
+  INFO Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 100.0%
+  INFO [6b13d7bf] Running /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [6b13d7bf] Command: /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [6b13d7bf] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [71b4203e] Running /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD as ubuntu@node.meowtechnology.com
+ DEBUG [71b4203e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD )
+ DEBUG [71b4203e] 	11860450e700766db794098068eec898d8a7d900	HEAD
+  INFO [71b4203e] Finished in 65.798 seconds with exit status 0 (successful).
+  INFO [4ec46c0f] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases as ubuntu@node.meowtechnology.com
+ DEBUG [4ec46c0f] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases
+  INFO [4ec46c0f] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [36409ed5] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/shared/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [36409ed5] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/shared/public/assets
+  INFO [36409ed5] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [4c21bb1a] Running [ -f /home/ubuntu/node_acclerate/current/REVISION ] as ubuntu@node.meowtechnology.com
+ DEBUG [4c21bb1a] Command: [ -f /home/ubuntu/node_acclerate/current/REVISION ]
+ DEBUG [4c21bb1a] Finished in 0.118 seconds with exit status 1 (failed).
+ DEBUG [f6b7be9c] Running [ -f /home/ubuntu/node_acclerate/repo/HEAD ] as ubuntu@node.meowtechnology.com
+ DEBUG [f6b7be9c] Command: [ -f /home/ubuntu/node_acclerate/repo/HEAD ]
+ DEBUG [f6b7be9c] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/node_acclerate/repo
+ DEBUG [2004dedf] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [2004dedf] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [2004dedf] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [c598dbcd] Running /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git as ubuntu@node.meowtechnology.com
+ DEBUG [c598dbcd] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git )
+  INFO [c598dbcd] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [d7bad8a8] Running /usr/bin/env git remote update --prune as ubuntu@node.meowtechnology.com
+ DEBUG [d7bad8a8] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d7bad8a8] 	Fetching origin
+ DEBUG [d7bad8a8] 	From https://github.com/charles-lei/aws-ec2-deploy
+   562a713..1186045  master     -> master
+  INFO [d7bad8a8] Finished in 3.288 seconds with exit status 0 (successful).
+ DEBUG [f8c53719] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [f8c53719] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [f8c53719] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO [1bff95a9] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418075751 as ubuntu@node.meowtechnology.com
+ DEBUG [1bff95a9] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418075751 )
+  INFO [1bff95a9] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [5ff9a53c] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180418075751 as ubuntu@node.meowtechnology.com
+ DEBUG [5ff9a53c] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180418075751 )
+  INFO [5ff9a53c] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [1a84ff12] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [1a84ff12] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [1a84ff12] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [6f65daeb] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@node.meowtechnology.com
+ DEBUG [6f65daeb] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6f65daeb] 	11860450e700766db794098068eec898d8a7d900
+ DEBUG [6f65daeb] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [acd04720] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418075751; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418075751'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [acd04720] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418075751; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418075751'" 1>&2; false; fi
+ DEBUG [acd04720] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [794213ad] Running /usr/bin/env echo "11860450e700766db794098068eec898d8a7d900" > REVISION as ubuntu@node.meowtechnology.com
+ DEBUG [794213ad] Command: cd /home/ubuntu/node_acclerate/releases/20180418075751 && /usr/bin/env echo "11860450e700766db794098068eec898d8a7d900" > REVISION
+  INFO [794213ad] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [5772f83a] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418075751 /home/ubuntu/node_acclerate/releases/20180418075751/tmp /home/ubuntu/node_acclerate/releases/20180418075751/public as ubuntu@node.meowtechnology.com
+ DEBUG [5772f83a] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418075751 /home/ubuntu/node_acclerate/releases/20180418075751/tmp /home/ubuntu/node_acclerate/releases/20180418075751/public
+  INFO [5772f83a] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [728ad3ed] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/log ] as ubuntu@node.meowtechnology.com
+ DEBUG [728ad3ed] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/log ]
+ DEBUG [728ad3ed] Finished in 0.115 seconds with exit status 1 (failed).
+ DEBUG [9f1d203c] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/log ] as ubuntu@node.meowtechnology.com
+ DEBUG [9f1d203c] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/log ]
+ DEBUG [9f1d203c] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [e31787b4] Running /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418075751/log as ubuntu@node.meowtechnology.com
+ DEBUG [e31787b4] Command: /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418075751/log
+  INFO [e31787b4] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [255f71a2] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/releases/20180418075751/log as ubuntu@node.meowtechnology.com
+ DEBUG [255f71a2] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/releases/20180418075751/log
+  INFO [255f71a2] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [b3161315] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/tmp/pids ] as ubuntu@node.meowtechnology.com
+ DEBUG [b3161315] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/tmp/pids ]
+ DEBUG [b3161315] Finished in 0.118 seconds with exit status 1 (failed).
+ DEBUG [9c3f229b] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/tmp/pids ] as ubuntu@node.meowtechnology.com
+ DEBUG [9c3f229b] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/tmp/pids ]
+ DEBUG [9c3f229b] Finished in 0.116 seconds with exit status 1 (failed).
+  INFO [5b28b182] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/releases/20180418075751/tmp/pids as ubuntu@node.meowtechnology.com
+ DEBUG [5b28b182] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/releases/20180418075751/tmp/pids
+  INFO [5b28b182] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [5b3ba779] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/tmp/cache ] as ubuntu@node.meowtechnology.com
+ DEBUG [5b3ba779] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/tmp/cache ]
+ DEBUG [5b3ba779] Finished in 0.115 seconds with exit status 1 (failed).
+ DEBUG [8f4a0d53] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/tmp/cache ] as ubuntu@node.meowtechnology.com
+ DEBUG [8f4a0d53] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/tmp/cache ]
+ DEBUG [8f4a0d53] Finished in 0.116 seconds with exit status 1 (failed).
+  INFO [818b4bee] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/releases/20180418075751/tmp/cache as ubuntu@node.meowtechnology.com
+ DEBUG [818b4bee] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/releases/20180418075751/tmp/cache
+  INFO [818b4bee] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [b1ca5574] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/tmp/sockets ] as ubuntu@node.meowtechnology.com
+ DEBUG [b1ca5574] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/tmp/sockets ]
+ DEBUG [b1ca5574] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [278e3217] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/tmp/sockets ] as ubuntu@node.meowtechnology.com
+ DEBUG [278e3217] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/tmp/sockets ]
+ DEBUG [278e3217] Finished in 0.118 seconds with exit status 1 (failed).
+  INFO [d654427a] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/releases/20180418075751/tmp/sockets as ubuntu@node.meowtechnology.com
+ DEBUG [d654427a] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/releases/20180418075751/tmp/sockets
+  INFO [d654427a] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [91ffcd6e] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/public/system ] as ubuntu@node.meowtechnology.com
+ DEBUG [91ffcd6e] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/public/system ]
+ DEBUG [91ffcd6e] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [5825acfd] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/public/system ] as ubuntu@node.meowtechnology.com
+ DEBUG [5825acfd] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/public/system ]
+ DEBUG [5825acfd] Finished in 0.118 seconds with exit status 1 (failed).
+  INFO [9af1c9ee] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/releases/20180418075751/public/system as ubuntu@node.meowtechnology.com
+ DEBUG [9af1c9ee] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/releases/20180418075751/public/system
+  INFO [9af1c9ee] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [abbbc7ad] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/node_module ] as ubuntu@node.meowtechnology.com
+ DEBUG [abbbc7ad] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/node_module ]
+ DEBUG [abbbc7ad] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [f5452511] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/node_module ] as ubuntu@node.meowtechnology.com
+ DEBUG [f5452511] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/node_module ]
+ DEBUG [f5452511] Finished in 0.118 seconds with exit status 1 (failed).
+  INFO [79b036b7] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/releases/20180418075751/node_module as ubuntu@node.meowtechnology.com
+ DEBUG [79b036b7] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/releases/20180418075751/node_module
+  INFO [79b036b7] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [e3d04e63] Running [ -L /home/ubuntu/node_acclerate/releases/20180418075751/public/assets ] as ubuntu@node.meowtechnology.com
+ DEBUG [e3d04e63] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418075751/public/assets ]
+ DEBUG [e3d04e63] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [130a8325] Running [ -d /home/ubuntu/node_acclerate/releases/20180418075751/public/assets ] as ubuntu@node.meowtechnology.com
+ DEBUG [130a8325] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418075751/public/assets ]
+ DEBUG [130a8325] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [da8c1f0c] Running /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418075751/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [da8c1f0c] Command: /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418075751/public/assets
+  INFO [da8c1f0c] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [63d562fd] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/assets /home/ubuntu/node_acclerate/releases/20180418075751/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [63d562fd] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/assets /home/ubuntu/node_acclerate/releases/20180418075751/public/assets
+  INFO [63d562fd] Finished in 0.114 seconds with exit status 0 (successful).
+ DEBUG [8241f160] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418075751; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418075751'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [8241f160] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418075751; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418075751'" 1>&2; false; fi
+ DEBUG [8241f160] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [82a7fec9] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/node_acclerate/shared/bundle as ubuntu@node.meowtechnology.com
+ DEBUG [82a7fec9] Command: cd /home/ubuntu/node_acclerate/releases/20180418075751 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/node_acclerate/shared/bundle
+ DEBUG [82a7fec9] 	Your Gemfile lists the gem capistrano-npm (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [82a7fec9] 	The following gems are missing
+ DEBUG [82a7fec9] 	 * public_suffix (3.0.2)
+ DEBUG [82a7fec9] 	 * addressable (2.5.2)
+ DEBUG [82a7fec9] 	 * net-ssh (4.2.0)
+ DEBUG [82a7fec9] 	 * net-scp (1.2.1)
+ DEBUG [82a7fec9] 	 * sshkit (1.16.0)
+ DEBUG [82a7fec9] 	 * airbrussh (1.3.0)
+ DEBUG [82a7fec9] 	 * bindex (0.5.0)
+ DEBUG [82a7fec9] 	 * byebug (10.0.2)
+ DEBUG [82a7fec9] 	 * capistrano (3.10.2)
+ DEBUG [82a7fec9] 	 * capistrano-bundler (1.3.0)
+ DEBUG [82a7fec9] 	 * capistrano-npm (1.0.2)
+ DEBUG [82a7fec9] 	 * capistrano-passenger (0.2.0)
+ DEBUG [82a7fec9] 	 * capistrano-rails (1.3.1)
+ DEBUG [82a7fec9] 	 * capistrano-rvm (0.1.2)
+ DEBUG [82a7fec9] 	 * xpath (3.0.0)
+ DEBUG [82a7fec9] 	 * capybara (2.18.0)
+ DEBUG [82a7fec9] 	 * childprocess (0.9.0)
+ DEBUG [82a7fec9] 	 * ruby_dep (1.5.0)
+ DEBUG [82a7fec9] 	 * listen (3.1.5)
+ DEBUG [82a7fec9] 	 * rubyzip (1.2.1)
+ DEBUG [82a7fec9] 	 * selenium-webdriver (3.11.0)
+ DEBUG [82a7fec9] 	 * spring (2.0.2)
+ DEBUG [82a7fec9] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [82a7fec9] 	 * web-console (3.6.0)
+ DEBUG [82a7fec9] 	Install missing gems with `bundle install`
+ DEBUG [82a7fec9] Finished in 0.867 seconds with exit status 1 (failed).
+  INFO [d9259f2a] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/node_acclerate/shared/bundle --without development test --deployment --quiet as ubuntu@node.meowtechnology.com
+ DEBUG [d9259f2a] Command: cd /home/ubuntu/node_acclerate/releases/20180418075751 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/node_acclerate/shared/bundle --without development test --deployment --quiet
+  INFO [d9259f2a] Finished in 3.447 seconds with exit status 0 (successful).
+ DEBUG [2ace3722] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418075751; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418075751'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [2ace3722] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418075751; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418075751'" 1>&2; false; fi
+ DEBUG [2ace3722] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [6cf0ad73] Running /usr/bin/env npm install --production --silent --no-progress as ubuntu@node.meowtechnology.com
+ DEBUG [6cf0ad73] Command: cd /home/ubuntu/node_acclerate/releases/20180418075751 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [6cf0ad73] 	/usr/bin/env: 
+ DEBUG [6cf0ad73] 	'npm'
+ DEBUG [6cf0ad73] 	: No such file or directory
+ DEBUG [6cf0ad73] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-18 16:07:27 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3551ccb5] Running /usr/bin/env which passenger as ubuntu@node.meowtechnology.com
+ DEBUG [3551ccb5] Command: /usr/bin/env which passenger
+ DEBUG [3551ccb5] Finished in 0.816 seconds with exit status 1 (failed).
+ DEBUG [ff6ceae1] Running [ -d ~/.rvm ] as ubuntu@node.meowtechnology.com
+ DEBUG [ff6ceae1] Command: [ -d ~/.rvm ]
+ DEBUG [ff6ceae1] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [670f974b] Running ~/.rvm/bin/rvm version as ubuntu@node.meowtechnology.com
+ DEBUG [670f974b] Command: ~/.rvm/bin/rvm version
+ DEBUG [670f974b] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [670f974b] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [e84afd53] Running ~/.rvm/bin/rvm current as ubuntu@node.meowtechnology.com
+ DEBUG [e84afd53] Command: ~/.rvm/bin/rvm current
+ DEBUG [e84afd53] 	ruby-2.4.1
+ DEBUG [e84afd53] Finished in 0.266 seconds with exit status 0 (successful).
+ DEBUG [cc5ca805] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@node.meowtechnology.com
+ DEBUG [cc5ca805] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [cc5ca805] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [cc5ca805] Finished in 0.375 seconds with exit status 0 (successful).
+  INFO [6662622d] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [6662622d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [6662622d] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 0.0%
+  INFO Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 100.0%
+  INFO [b4831421] Running /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [b4831421] Command: /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [b4831421] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [249cfef7] Running /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD as ubuntu@node.meowtechnology.com
+ DEBUG [249cfef7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD )
+ DEBUG [249cfef7] 	11860450e700766db794098068eec898d8a7d900	HEAD
+  INFO [249cfef7] Finished in 1.877 seconds with exit status 0 (successful).
+  INFO [7eef860e] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases as ubuntu@node.meowtechnology.com
+ DEBUG [7eef860e] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases
+  INFO [7eef860e] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [fd0b06b5] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/shared/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [fd0b06b5] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/shared/public/assets
+  INFO [fd0b06b5] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [9ecbbf13] Running [ -f /home/ubuntu/node_acclerate/current/REVISION ] as ubuntu@node.meowtechnology.com
+ DEBUG [9ecbbf13] Command: [ -f /home/ubuntu/node_acclerate/current/REVISION ]
+ DEBUG [9ecbbf13] Finished in 0.116 seconds with exit status 1 (failed).
+ DEBUG [58b7c387] Running [ -f /home/ubuntu/node_acclerate/repo/HEAD ] as ubuntu@node.meowtechnology.com
+ DEBUG [58b7c387] Command: [ -f /home/ubuntu/node_acclerate/repo/HEAD ]
+ DEBUG [58b7c387] Finished in 0.118 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/node_acclerate/repo
+ DEBUG [a54971c6] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [a54971c6] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [a54971c6] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [c7aebaee] Running /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git as ubuntu@node.meowtechnology.com
+ DEBUG [c7aebaee] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git )
+  INFO [c7aebaee] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [03dfe1b0] Running /usr/bin/env git remote update --prune as ubuntu@node.meowtechnology.com
+ DEBUG [03dfe1b0] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [03dfe1b0] 	Fetching origin
+  INFO [03dfe1b0] Finished in 1.875 seconds with exit status 0 (successful).
+ DEBUG [ae1d624d] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [ae1d624d] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [ae1d624d] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [c703c0a3] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080732 as ubuntu@node.meowtechnology.com
+ DEBUG [c703c0a3] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080732 )
+  INFO [c703c0a3] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [f5f9fdef] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180418080732 as ubuntu@node.meowtechnology.com
+ DEBUG [f5f9fdef] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180418080732 )
+  INFO [f5f9fdef] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [d75a2d0b] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [d75a2d0b] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [d75a2d0b] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [b21a7307] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@node.meowtechnology.com
+ DEBUG [b21a7307] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b21a7307] 	11860450e700766db794098068eec898d8a7d900
+ DEBUG [b21a7307] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [84e0873a] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418080732; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080732'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [84e0873a] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418080732; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080732'" 1>&2; false; fi
+ DEBUG [84e0873a] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [141c4b2f] Running /usr/bin/env echo "11860450e700766db794098068eec898d8a7d900" > REVISION as ubuntu@node.meowtechnology.com
+ DEBUG [141c4b2f] Command: cd /home/ubuntu/node_acclerate/releases/20180418080732 && /usr/bin/env echo "11860450e700766db794098068eec898d8a7d900" > REVISION
+  INFO [141c4b2f] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [adc8b453] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080732 /home/ubuntu/node_acclerate/releases/20180418080732/tmp /home/ubuntu/node_acclerate/releases/20180418080732/public as ubuntu@node.meowtechnology.com
+ DEBUG [adc8b453] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080732 /home/ubuntu/node_acclerate/releases/20180418080732/tmp /home/ubuntu/node_acclerate/releases/20180418080732/public
+  INFO [adc8b453] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [57e2b5c4] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/log ] as ubuntu@node.meowtechnology.com
+ DEBUG [57e2b5c4] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/log ]
+ DEBUG [57e2b5c4] Finished in 0.118 seconds with exit status 1 (failed).
+ DEBUG [ba8e04cc] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/log ] as ubuntu@node.meowtechnology.com
+ DEBUG [ba8e04cc] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/log ]
+ DEBUG [ba8e04cc] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [7c8d4e99] Running /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080732/log as ubuntu@node.meowtechnology.com
+ DEBUG [7c8d4e99] Command: /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080732/log
+  INFO [7c8d4e99] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [15b829c9] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/releases/20180418080732/log as ubuntu@node.meowtechnology.com
+ DEBUG [15b829c9] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/releases/20180418080732/log
+  INFO [15b829c9] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [327a4ae8] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/tmp/pids ] as ubuntu@node.meowtechnology.com
+ DEBUG [327a4ae8] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/tmp/pids ]
+ DEBUG [327a4ae8] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [0c9c0573] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/tmp/pids ] as ubuntu@node.meowtechnology.com
+ DEBUG [0c9c0573] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/tmp/pids ]
+ DEBUG [0c9c0573] Finished in 0.115 seconds with exit status 1 (failed).
+  INFO [1ecbc99f] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/releases/20180418080732/tmp/pids as ubuntu@node.meowtechnology.com
+ DEBUG [1ecbc99f] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/releases/20180418080732/tmp/pids
+  INFO [1ecbc99f] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [472840cb] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/tmp/cache ] as ubuntu@node.meowtechnology.com
+ DEBUG [472840cb] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/tmp/cache ]
+ DEBUG [472840cb] Finished in 0.122 seconds with exit status 1 (failed).
+ DEBUG [f48df3bf] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/tmp/cache ] as ubuntu@node.meowtechnology.com
+ DEBUG [f48df3bf] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/tmp/cache ]
+ DEBUG [f48df3bf] Finished in 0.122 seconds with exit status 1 (failed).
+  INFO [221125c0] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/releases/20180418080732/tmp/cache as ubuntu@node.meowtechnology.com
+ DEBUG [221125c0] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/releases/20180418080732/tmp/cache
+  INFO [221125c0] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [27a3a74b] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/tmp/sockets ] as ubuntu@node.meowtechnology.com
+ DEBUG [27a3a74b] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/tmp/sockets ]
+ DEBUG [27a3a74b] Finished in 0.119 seconds with exit status 1 (failed).
+ DEBUG [f1dedf7d] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/tmp/sockets ] as ubuntu@node.meowtechnology.com
+ DEBUG [f1dedf7d] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/tmp/sockets ]
+ DEBUG [f1dedf7d] Finished in 0.119 seconds with exit status 1 (failed).
+  INFO [14eb8742] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/releases/20180418080732/tmp/sockets as ubuntu@node.meowtechnology.com
+ DEBUG [14eb8742] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/releases/20180418080732/tmp/sockets
+  INFO [14eb8742] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [195e8b94] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/public/system ] as ubuntu@node.meowtechnology.com
+ DEBUG [195e8b94] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/public/system ]
+ DEBUG [195e8b94] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [77109316] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/public/system ] as ubuntu@node.meowtechnology.com
+ DEBUG [77109316] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/public/system ]
+ DEBUG [77109316] Finished in 0.114 seconds with exit status 1 (failed).
+  INFO [60e870c5] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/releases/20180418080732/public/system as ubuntu@node.meowtechnology.com
+ DEBUG [60e870c5] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/releases/20180418080732/public/system
+  INFO [60e870c5] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [d55019eb] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/node_module ] as ubuntu@node.meowtechnology.com
+ DEBUG [d55019eb] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/node_module ]
+ DEBUG [d55019eb] Finished in 0.115 seconds with exit status 1 (failed).
+ DEBUG [69a6378e] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/node_module ] as ubuntu@node.meowtechnology.com
+ DEBUG [69a6378e] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/node_module ]
+ DEBUG [69a6378e] Finished in 0.116 seconds with exit status 1 (failed).
+  INFO [bb332ffb] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/releases/20180418080732/node_module as ubuntu@node.meowtechnology.com
+ DEBUG [bb332ffb] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/releases/20180418080732/node_module
+  INFO [bb332ffb] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [3b2cc037] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080732/public/assets ] as ubuntu@node.meowtechnology.com
+ DEBUG [3b2cc037] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080732/public/assets ]
+ DEBUG [3b2cc037] Finished in 0.119 seconds with exit status 1 (failed).
+ DEBUG [43e48833] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080732/public/assets ] as ubuntu@node.meowtechnology.com
+ DEBUG [43e48833] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080732/public/assets ]
+ DEBUG [43e48833] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [e784deaa] Running /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080732/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [e784deaa] Command: /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080732/public/assets
+  INFO [e784deaa] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [38ca2d39] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/assets /home/ubuntu/node_acclerate/releases/20180418080732/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [38ca2d39] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/assets /home/ubuntu/node_acclerate/releases/20180418080732/public/assets
+  INFO [38ca2d39] Finished in 0.120 seconds with exit status 0 (successful).
+ DEBUG [61d815fc] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418080732; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080732'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [61d815fc] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418080732; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080732'" 1>&2; false; fi
+ DEBUG [61d815fc] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [7fd6be6f] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/node_acclerate/shared/bundle as ubuntu@node.meowtechnology.com
+ DEBUG [7fd6be6f] Command: cd /home/ubuntu/node_acclerate/releases/20180418080732 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/node_acclerate/shared/bundle
+ DEBUG [7fd6be6f] 	Your Gemfile lists the gem capistrano-npm (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [7fd6be6f] 	The following gems are missing
+ DEBUG [7fd6be6f] 	 * public_suffix (3.0.2)
+ DEBUG [7fd6be6f] 	 * addressable (2.5.2)
+ DEBUG [7fd6be6f] 	 * net-ssh (4.2.0)
+ DEBUG [7fd6be6f] 	 * net-scp (1.2.1)
+ DEBUG [7fd6be6f] 	 * sshkit (1.16.0)
+ DEBUG [7fd6be6f] 	 * airbrussh (1.3.0)
+ DEBUG [7fd6be6f] 	 * bindex (0.5.0)
+ DEBUG [7fd6be6f] 	 * byebug (10.0.2)
+ DEBUG [7fd6be6f] 	 * capistrano (3.10.2)
+ DEBUG [7fd6be6f] 	 * capistrano-bundler (1.3.0)
+ DEBUG [7fd6be6f] 	 * capistrano-npm (1.0.2)
+ DEBUG [7fd6be6f] 	 * capistrano-passenger (0.2.0)
+ DEBUG [7fd6be6f] 	 * capistrano-rails (1.3.1)
+ DEBUG [7fd6be6f] 	 * capistrano-rvm (0.1.2)
+ DEBUG [7fd6be6f] 	 * xpath (3.0.0)
+ DEBUG [7fd6be6f] 	 * capybara (2.18.0)
+ DEBUG [7fd6be6f] 	 * childprocess (0.9.0)
+ DEBUG [7fd6be6f] 	 * ruby_dep (1.5.0)
+ DEBUG [7fd6be6f] 	 * listen (3.1.5)
+ DEBUG [7fd6be6f] 	 * rubyzip (1.2.1)
+ DEBUG [7fd6be6f] 	 * selenium-webdriver (3.11.0)
+ DEBUG [7fd6be6f] 	 * spring (2.0.2)
+ DEBUG [7fd6be6f] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [7fd6be6f] 	 * web-console (3.6.0)
+ DEBUG [7fd6be6f] 	Install missing gems with `bundle install`
+ DEBUG [7fd6be6f] Finished in 0.673 seconds with exit status 1 (failed).
+  INFO [ca5c84c6] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/node_acclerate/shared/bundle --without development test --deployment --quiet as ubuntu@node.meowtechnology.com
+ DEBUG [ca5c84c6] Command: cd /home/ubuntu/node_acclerate/releases/20180418080732 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/node_acclerate/shared/bundle --without development test --deployment --quiet
+  INFO [ca5c84c6] Finished in 2.913 seconds with exit status 0 (successful).
+ DEBUG [d6b07af3] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418080732; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080732'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [d6b07af3] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418080732; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080732'" 1>&2; false; fi
+ DEBUG [d6b07af3] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [8cf255ec] Running /usr/bin/env npm install --production --silent --no-progress as ubuntu@node.meowtechnology.com
+ DEBUG [8cf255ec] Command: cd /home/ubuntu/node_acclerate/releases/20180418080732 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [8cf255ec] 	/usr/bin/env: 
+ DEBUG [8cf255ec] 	'npm'
+ DEBUG [8cf255ec] 	: No such file or directory
+ DEBUG [8cf255ec] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-04-18 16:09:10 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2ffeac39] Running /usr/bin/env which passenger as ubuntu@node.meowtechnology.com
+ DEBUG [2ffeac39] Command: /usr/bin/env which passenger
+ DEBUG [2ffeac39] Finished in 0.789 seconds with exit status 1 (failed).
+ DEBUG [595d01ea] Running [ -d ~/.rvm ] as ubuntu@node.meowtechnology.com
+ DEBUG [595d01ea] Command: [ -d ~/.rvm ]
+ DEBUG [595d01ea] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [e1ed9c51] Running ~/.rvm/bin/rvm version as ubuntu@node.meowtechnology.com
+ DEBUG [e1ed9c51] Command: ~/.rvm/bin/rvm version
+ DEBUG [e1ed9c51] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [e1ed9c51] Finished in 0.277 seconds with exit status 0 (successful).
+ DEBUG [14b7d543] Running ~/.rvm/bin/rvm current as ubuntu@node.meowtechnology.com
+ DEBUG [14b7d543] Command: ~/.rvm/bin/rvm current
+ DEBUG [14b7d543] 	ruby-2.4.1
+ DEBUG [14b7d543] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [a042184e] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@node.meowtechnology.com
+ DEBUG [a042184e] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [a042184e] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [a042184e] Finished in 0.418 seconds with exit status 0 (successful).
+  INFO [ab6c188b] Running /usr/bin/env mkdir -p /tmp as ubuntu@node.meowtechnology.com
+ DEBUG [ab6c188b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ab6c188b] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 0.0%
+  INFO Uploading /tmp/git-ssh-node_acclerate-production-edz.sh 100.0%
+  INFO [59ad40cf] Running /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh as ubuntu@node.meowtechnology.com
+ DEBUG [59ad40cf] Command: /usr/bin/env chmod 700 /tmp/git-ssh-node_acclerate-production-edz.sh
+  INFO [59ad40cf] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [1bb06499] Running /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD as ubuntu@node.meowtechnology.com
+ DEBUG [1bb06499] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git ls-remote https://github.com/charles-lei/aws-ec2-deploy.git HEAD )
+ DEBUG [1bb06499] 	11860450e700766db794098068eec898d8a7d900	HEAD
+  INFO [1bb06499] Finished in 2.219 seconds with exit status 0 (successful).
+  INFO [c18a0973] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases as ubuntu@node.meowtechnology.com
+ DEBUG [c18a0973] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared /home/ubuntu/node_acclerate/releases
+  INFO [c18a0973] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [7223d13e] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/shared/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [7223d13e] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/shared/public/assets
+  INFO [7223d13e] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [7b39d899] Running [ -f /home/ubuntu/node_acclerate/current/REVISION ] as ubuntu@node.meowtechnology.com
+ DEBUG [7b39d899] Command: [ -f /home/ubuntu/node_acclerate/current/REVISION ]
+ DEBUG [7b39d899] Finished in 0.126 seconds with exit status 1 (failed).
+ DEBUG [19a451f7] Running [ -f /home/ubuntu/node_acclerate/repo/HEAD ] as ubuntu@node.meowtechnology.com
+ DEBUG [19a451f7] Command: [ -f /home/ubuntu/node_acclerate/repo/HEAD ]
+ DEBUG [19a451f7] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/node_acclerate/repo
+ DEBUG [28af4c4c] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [28af4c4c] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [28af4c4c] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [5afcdd57] Running /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git as ubuntu@node.meowtechnology.com
+ DEBUG [5afcdd57] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote set-url origin https://github.com/charles-lei/aws-ec2-deploy.git )
+  INFO [5afcdd57] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [9882c60d] Running /usr/bin/env git remote update --prune as ubuntu@node.meowtechnology.com
+ DEBUG [9882c60d] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9882c60d] 	Fetching origin
+  INFO [9882c60d] Finished in 3.045 seconds with exit status 0 (successful).
+ DEBUG [c4e657db] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [c4e657db] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [c4e657db] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [8676a2dc] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080915 as ubuntu@node.meowtechnology.com
+ DEBUG [8676a2dc] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080915 )
+  INFO [8676a2dc] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [01e256cf] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180418080915 as ubuntu@node.meowtechnology.com
+ DEBUG [01e256cf] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/node_acclerate/releases/20180418080915 )
+  INFO [01e256cf] Finished in 0.139 seconds with exit status 0 (successful).
+ DEBUG [eefd93c0] Running if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [eefd93c0] Command: if test ! -d /home/ubuntu/node_acclerate/repo; then echo "Directory does not exist '/home/ubuntu/node_acclerate/repo'" 1>&2; false; fi
+ DEBUG [eefd93c0] Finished in 0.122 seconds with exit status 0 (successful).
+ DEBUG [59592382] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@node.meowtechnology.com
+ DEBUG [59592382] Command: cd /home/ubuntu/node_acclerate/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-node_acclerate-production-edz.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [59592382] 	11860450e700766db794098068eec898d8a7d900
+ DEBUG [59592382] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [bc9fa96d] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418080915; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080915'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [bc9fa96d] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418080915; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080915'" 1>&2; false; fi
+ DEBUG [bc9fa96d] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [e5f14246] Running /usr/bin/env echo "11860450e700766db794098068eec898d8a7d900" > REVISION as ubuntu@node.meowtechnology.com
+ DEBUG [e5f14246] Command: cd /home/ubuntu/node_acclerate/releases/20180418080915 && /usr/bin/env echo "11860450e700766db794098068eec898d8a7d900" > REVISION
+  INFO [e5f14246] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [79b551bb] Running /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080915 /home/ubuntu/node_acclerate/releases/20180418080915/tmp /home/ubuntu/node_acclerate/releases/20180418080915/public as ubuntu@node.meowtechnology.com
+ DEBUG [79b551bb] Command: /usr/bin/env mkdir -p /home/ubuntu/node_acclerate/releases/20180418080915 /home/ubuntu/node_acclerate/releases/20180418080915/tmp /home/ubuntu/node_acclerate/releases/20180418080915/public
+  INFO [79b551bb] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [925ced8c] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/log ] as ubuntu@node.meowtechnology.com
+ DEBUG [925ced8c] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/log ]
+ DEBUG [925ced8c] Finished in 0.124 seconds with exit status 1 (failed).
+ DEBUG [7756cea4] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/log ] as ubuntu@node.meowtechnology.com
+ DEBUG [7756cea4] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/log ]
+ DEBUG [7756cea4] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [813294e1] Running /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080915/log as ubuntu@node.meowtechnology.com
+ DEBUG [813294e1] Command: /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080915/log
+  INFO [813294e1] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [365f373f] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/releases/20180418080915/log as ubuntu@node.meowtechnology.com
+ DEBUG [365f373f] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/log /home/ubuntu/node_acclerate/releases/20180418080915/log
+  INFO [365f373f] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [0e857a14] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/tmp/pids ] as ubuntu@node.meowtechnology.com
+ DEBUG [0e857a14] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/tmp/pids ]
+ DEBUG [0e857a14] Finished in 0.127 seconds with exit status 1 (failed).
+ DEBUG [b12faef6] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/tmp/pids ] as ubuntu@node.meowtechnology.com
+ DEBUG [b12faef6] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/tmp/pids ]
+ DEBUG [b12faef6] Finished in 0.122 seconds with exit status 1 (failed).
+  INFO [7a55bd3e] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/releases/20180418080915/tmp/pids as ubuntu@node.meowtechnology.com
+ DEBUG [7a55bd3e] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/pids /home/ubuntu/node_acclerate/releases/20180418080915/tmp/pids
+  INFO [7a55bd3e] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [7f829299] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/tmp/cache ] as ubuntu@node.meowtechnology.com
+ DEBUG [7f829299] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/tmp/cache ]
+ DEBUG [7f829299] Finished in 0.127 seconds with exit status 1 (failed).
+ DEBUG [7e616848] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/tmp/cache ] as ubuntu@node.meowtechnology.com
+ DEBUG [7e616848] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/tmp/cache ]
+ DEBUG [7e616848] Finished in 0.124 seconds with exit status 1 (failed).
+  INFO [3465ab98] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/releases/20180418080915/tmp/cache as ubuntu@node.meowtechnology.com
+ DEBUG [3465ab98] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/cache /home/ubuntu/node_acclerate/releases/20180418080915/tmp/cache
+  INFO [3465ab98] Finished in 0.154 seconds with exit status 0 (successful).
+ DEBUG [e9de5345] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/tmp/sockets ] as ubuntu@node.meowtechnology.com
+ DEBUG [e9de5345] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/tmp/sockets ]
+ DEBUG [e9de5345] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [e8a7e8db] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/tmp/sockets ] as ubuntu@node.meowtechnology.com
+ DEBUG [e8a7e8db] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/tmp/sockets ]
+ DEBUG [e8a7e8db] Finished in 0.183 seconds with exit status 1 (failed).
+  INFO [1b9f5364] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/releases/20180418080915/tmp/sockets as ubuntu@node.meowtechnology.com
+ DEBUG [1b9f5364] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/tmp/sockets /home/ubuntu/node_acclerate/releases/20180418080915/tmp/sockets
+  INFO [1b9f5364] Finished in 0.264 seconds with exit status 0 (successful).
+ DEBUG [42866960] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/public/system ] as ubuntu@node.meowtechnology.com
+ DEBUG [42866960] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/public/system ]
+ DEBUG [42866960] Finished in 0.294 seconds with exit status 1 (failed).
+ DEBUG [c7b9e729] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/public/system ] as ubuntu@node.meowtechnology.com
+ DEBUG [c7b9e729] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/public/system ]
+ DEBUG [c7b9e729] Finished in 0.251 seconds with exit status 1 (failed).
+  INFO [eeb94a5d] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/releases/20180418080915/public/system as ubuntu@node.meowtechnology.com
+ DEBUG [eeb94a5d] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/system /home/ubuntu/node_acclerate/releases/20180418080915/public/system
+  INFO [eeb94a5d] Finished in 0.225 seconds with exit status 0 (successful).
+ DEBUG [55738ebb] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/node_module ] as ubuntu@node.meowtechnology.com
+ DEBUG [55738ebb] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/node_module ]
+ DEBUG [55738ebb] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [d3a9988b] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/node_module ] as ubuntu@node.meowtechnology.com
+ DEBUG [d3a9988b] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/node_module ]
+ DEBUG [d3a9988b] Finished in 0.202 seconds with exit status 1 (failed).
+  INFO [5acc31bb] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/releases/20180418080915/node_module as ubuntu@node.meowtechnology.com
+ DEBUG [5acc31bb] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/node_module /home/ubuntu/node_acclerate/releases/20180418080915/node_module
+  INFO [5acc31bb] Finished in 0.229 seconds with exit status 0 (successful).
+ DEBUG [9c08fa0f] Running [ -L /home/ubuntu/node_acclerate/releases/20180418080915/public/assets ] as ubuntu@node.meowtechnology.com
+ DEBUG [9c08fa0f] Command: [ -L /home/ubuntu/node_acclerate/releases/20180418080915/public/assets ]
+ DEBUG [9c08fa0f] Finished in 0.264 seconds with exit status 1 (failed).
+ DEBUG [2a3371e3] Running [ -d /home/ubuntu/node_acclerate/releases/20180418080915/public/assets ] as ubuntu@node.meowtechnology.com
+ DEBUG [2a3371e3] Command: [ -d /home/ubuntu/node_acclerate/releases/20180418080915/public/assets ]
+ DEBUG [2a3371e3] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [0f1cc74e] Running /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080915/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [0f1cc74e] Command: /usr/bin/env rm -rf /home/ubuntu/node_acclerate/releases/20180418080915/public/assets
+  INFO [0f1cc74e] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [aa327031] Running /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/assets /home/ubuntu/node_acclerate/releases/20180418080915/public/assets as ubuntu@node.meowtechnology.com
+ DEBUG [aa327031] Command: /usr/bin/env ln -s /home/ubuntu/node_acclerate/shared/public/assets /home/ubuntu/node_acclerate/releases/20180418080915/public/assets
+  INFO [aa327031] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [33751d8f] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418080915; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080915'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [33751d8f] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418080915; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080915'" 1>&2; false; fi
+ DEBUG [33751d8f] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [a95a4100] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/node_acclerate/shared/bundle as ubuntu@node.meowtechnology.com
+ DEBUG [a95a4100] Command: cd /home/ubuntu/node_acclerate/releases/20180418080915 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/node_acclerate/shared/bundle
+ DEBUG [a95a4100] 	Your Gemfile lists the gem capistrano-npm (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of one of them later.
+ DEBUG [a95a4100] 	The following gems are missing
+ DEBUG [a95a4100] 	 * public_suffix (3.0.2)
+ DEBUG [a95a4100] 	 * addressable (2.5.2)
+ DEBUG [a95a4100] 	 * net-ssh (4.2.0)
+ DEBUG [a95a4100] 	 * net-scp (1.2.1)
+ DEBUG [a95a4100] 	 * sshkit (1.16.0)
+ DEBUG [a95a4100] 	 * airbrussh (1.3.0)
+ DEBUG [a95a4100] 	 * bindex (0.5.0)
+ DEBUG [a95a4100] 	 * byebug (10.0.2)
+ DEBUG [a95a4100] 	 * capistrano (3.10.2)
+ DEBUG [a95a4100] 	 * capistrano-bundler (1.3.0)
+ DEBUG [a95a4100] 	 * capistrano-npm (1.0.2)
+ DEBUG [a95a4100] 	 * capistrano-passenger (0.2.0)
+ DEBUG [a95a4100] 	 * capistrano-rails (1.3.1)
+ DEBUG [a95a4100] 	 * capistrano-rvm (0.1.2)
+ DEBUG [a95a4100] 	 * xpath (3.0.0)
+ DEBUG [a95a4100] 	 * capybara (2.18.0)
+ DEBUG [a95a4100] 	 * childprocess (0.9.0)
+ DEBUG [a95a4100] 	 * ruby_dep (1.5.0)
+ DEBUG [a95a4100] 	 * listen (3.1.5)
+ DEBUG [a95a4100] 	 * rubyzip (1.2.1)
+ DEBUG [a95a4100] 	 * selenium-webdriver (3.11.0)
+ DEBUG [a95a4100] 	 * spring (2.0.2)
+ DEBUG [a95a4100] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [a95a4100] 	 * web-console (3.6.0)
+ DEBUG [a95a4100] 	Install missing gems with `bundle install`
+ DEBUG [a95a4100] Finished in 0.684 seconds with exit status 1 (failed).
+  INFO [2f07f192] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/node_acclerate/shared/bundle --without development test --deployment --quiet as ubuntu@node.meowtechnology.com
+ DEBUG [2f07f192] Command: cd /home/ubuntu/node_acclerate/releases/20180418080915 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/node_acclerate/shared/bundle --without development test --deployment --quiet
+  INFO [2f07f192] Finished in 4.476 seconds with exit status 0 (successful).
+ DEBUG [37fdb8a9] Running if test ! -d /home/ubuntu/node_acclerate/releases/20180418080915; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080915'" 1>&2; false; fi as ubuntu@node.meowtechnology.com
+ DEBUG [37fdb8a9] Command: if test ! -d /home/ubuntu/node_acclerate/releases/20180418080915; then echo "Directory does not exist '/home/ubuntu/node_acclerate/releases/20180418080915'" 1>&2; false; fi
+ DEBUG [37fdb8a9] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [8d935162] Running /usr/bin/env npm install --production --silent --no-progress as ubuntu@node.meowtechnology.com
+ DEBUG [8d935162] Command: cd /home/ubuntu/node_acclerate/releases/20180418080915 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [8d935162] 	/usr/bin/env: 
+ DEBUG [8d935162] 	'npm'
+ DEBUG [8d935162] 	: No such file or directory
+ DEBUG [8d935162] 	

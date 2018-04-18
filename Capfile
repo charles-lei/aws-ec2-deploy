@@ -34,6 +34,8 @@ set :rvm_ruby_version, '2.3.1'
 # require "capistrano/chruby"
 require "capistrano/bundler"
 require 'capistrano/npm'
+set :npm_target_path, -> { release_path }
+set :npm_flags, '--silent --no-progress'
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require "capistrano/passenger"
