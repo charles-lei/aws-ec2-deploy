@@ -30,12 +30,15 @@ install_plugin Capistrano::SCM::Git
 require "capistrano/rvm"
 set :rvm_type, :user
 set :rvm_ruby_version, '2.3.1'
+
+require 'capistrano/nvm'
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v9.11.1'
+set :nvm_map_bins, %w{node npm}
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
 require "capistrano/bundler"
 require 'capistrano/npm'
-set :npm_target_path, -> { release_path }
-set :npm_flags, '--silent --no-progress'
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require "capistrano/passenger"

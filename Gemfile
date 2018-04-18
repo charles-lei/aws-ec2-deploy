@@ -48,7 +48,7 @@ group :development, :test do
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
   gem 'capistrano-rvm'
-  gem 'capistrano-npm'
+  gem 'capistrano-nvm', require: false
 end
 
 group :development do
