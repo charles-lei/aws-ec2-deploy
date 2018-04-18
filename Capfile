@@ -29,12 +29,12 @@ install_plugin Capistrano::SCM::Git
 #
 require "capistrano/rvm"
 set :rvm_type, :user
-set :rvm_ruby_version, '2.3.1'
+set :rvm_ruby_version, '2.3.1p112'
 
 require 'capistrano/nvm'
 set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v9.11.1'
-set :nvm_map_bins, %w{node npm}
+set :nvm_node, 'v9.3.0'
+set :nvm_map_bins, %w{node npm yarn}
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
 require "capistrano/bundler"
