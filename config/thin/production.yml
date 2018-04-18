@@ -8,7 +8,7 @@ max_conns: 1024
 require: []  
   
 environment: production  
-secret_key_base: ENV["SECRET_KEY_BASE"]
+secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
 max_persistent_conns: 512  
 servers: 1 
 daemonize: true  
