@@ -10,5 +10,4 @@ require: []
 environment: production  
 max_persistent_conns: 512  
 servers: 1 
-daemonize: true  
-chdir: /var/www/redmine  
+daemonize: true
