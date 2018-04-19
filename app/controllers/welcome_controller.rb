@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    p Rails.env
     if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
       redirect_to tip_path 
     end
@@ -24,8 +25,8 @@ class WelcomeController < ApplicationController
       if course_sign
         result, message = 1, 'already_signed'
       else
-        p "node contracts.js #{student.wallet_address} #{send_nodes_count}"
-        sender_result = system "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Course::CURRENT_COURSE} #{student.id}"
+        p "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"
+        sender_result = system "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"
         p sender_result
         if sender_result
           CourseSign.create(student: student, course_id: Course::CURRENT_COURSE, received_nodes: send_nodes_count)
