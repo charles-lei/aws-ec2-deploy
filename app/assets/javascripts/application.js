@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 //= require jquery.min
 //= require jquery.validate
 //= require validate_expand
+//= require qrcode.min
