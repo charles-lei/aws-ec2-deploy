@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require_tree .
 //= require jquery.min
+//= require jquery.z.form
 //= require jquery.validate
 //= require validate_expand
 //= require qrcode.min

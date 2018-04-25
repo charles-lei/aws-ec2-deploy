@@ -26,7 +26,7 @@ class WelcomeController < ApplicationController
         result, message = 1, 'already_signed'
       else
         p "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"
-        sender_result = system "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"
+        sender_result = true#system "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"
         p sender_result
         if sender_result
           CourseSign.create(student: student, course_id: Course::CURRENT_COURSE, received_nodes: send_nodes_count)

@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   post 'signin', action: :signin, controller: 'welcome'
   get 'qcode', action: :qcode, controller: 'welcome'
   get 'tip', action: :tip, controller: 'welcome'
+  get 'giveaway', action: :index, controller: 'giveaway'
+  post 'giveaway', action: :create, controller: 'giveaway'
 end

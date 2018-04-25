@@ -2,3 +2,4 @@ log
 node_modules
 public/assets
 tmp
+.byebug_history

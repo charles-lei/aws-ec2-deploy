@@ -11,6 +11,61 @@ body{
 	 background: image_url('sign_bg.png')  no-repeat;
    background-size: 100% 100%;
 }
+.giveaway_wrap {
+	 height: 100%;
+	 width: 100%;
+	 background: image_url('giveaway.png')  no-repeat;
+   background-size: 100% 100%;
+}
+.tip {
+	text-align: center;
+	color: white;
+}
+.giveaway_title{
+	font-size: 2.5rem;
+	padding-top: 60px;
+	color: white;
+	text-align: center;
+}
+.giveaway_area {
+	margin: 30px;
+	height: 150px;
+	background: white;
+	border-radius: 20px;
+	text-align: center;
+}
+.giveaway_random {
+	line-height: 150px;
+  font-size: 120px;
+  color: #4B9CDD;
+}
+.giveaway_term {
+	height: 40px;
+  width: 100%;
+  margin: 30px 0 30px 0;
+}
+.giveaway_term input {
+	height: 100%;
+	width:  100%;
+	border-radius: 5px;
+	border: none;
+	text-align: center;
+}
+.giveaway_button{
+	text-align: center;
+}
+.giveaway_button button {
+	height: 40px;
+  width: 50%;
+  border: none;
+  background: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4B9CDD;
+}
+.giveaway_button button:disabled {
+	background: lightgray;
+}
 .container {
 	height: 100%;
 }

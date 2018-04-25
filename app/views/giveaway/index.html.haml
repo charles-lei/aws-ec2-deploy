@@ -1,0 +1,120 @@
+.giveaway_wrap
+  .giveaway_title
+    %p.title NODE积分
+    %p.title 大放送
+    / %img{:src => "#{image_path('node_logo.png')}"}
+  .giveaway_area
+    %span.giveaway_random 000
+  = form_tag giveaway_path, :method => 'post', :class => 'sign_form', :id =>'giveaway_form', :remote => true do
+    = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+    .giveaway_term
+      = text_field_tag :phone, '', :placeholder => "请输入手机号"
+      .tipinfo
+    .giveaway_button
+      %button#giveaway_button.button 立即抽奖
+  .tip 注：NODE积分将在本次课程结束后发放
+// 遮罩背景
+.sign_bg{:style => "display: none"}
+// 签到成功弹框
+#suc_tk.sign_tk{:style => "display: none"}
+  .sign_suc
+    .suc_title 提示
+    .sign_con
+      %p 恭喜您
+      %p#random
+    #suc_close.sign_close
+// 签到失败弹框
+#unsuc_tk.sign_tk{:style => "display: none"}
+  .sign_unsuc
+    .unsuc_title 提示
+    .sign_con
+      %p#unsuc_sub_title
+      %p#unsuc_sub_title_desc
+    #unsuc_close.sign_close
+:javascript
+  $(document).ready(function(){
+    /*签到成功弹框关闭*/
+    $("#suc_close").click(function(){
+      $("#suc_tk,.sign_bg").fadeOut(400);
+    });
+    /*签到失败弹框关闭*/
+    $("#unsuc_close").click(function(){
+      $("#unsuc_tk,.sign_bg").fadeOut(400);
+    });
+    $("#giveaway_form").validate({
+        onkeyup:false,
+        //设置验证规则
+        rules: {
+            "phone": {
+                required: true,
+                isMobile: true
+            }
+        },
+        //设置错误信息
+        messages: {
+            "phone": {
+                required: "手机号码不能为空",
+                isMobile: "请输入有效的手机号码"
+            }
+        },
+        submitHandler:function(form) {
+          $("#giveaway_button").prop( "disabled", true );
+          $(form).ajaxSubmit({
+            success: function(data) {
+              var result = data.result
+              var message = data.message
+              var nodes = data.nodes
+              var interval;
+              if(result == 0) {
+                  interval = setInterval(function(){
+                  var x = Math.floor((Math.random() * 1000));
+                  $(".giveaway_random").html(x)
+                }, 100)
+                setTimeout(function(){
+                  clearInterval(interval)
+                  $(".giveaway_random").html('' + nodes)
+                  $("#random").html('获得' + nodes + ' NODE积分')
+                  $(".sign_bg").show()
+                  $("#suc_tk").show()
+                  $("#giveaway_button").prop( "disabled", false );
+                }, 3000)     
+              } else {
+                switch(message) {
+                  case 'no_chance':
+                    $('#unsuc_sub_title').html('本次抽奖机会已用完！')
+                    $('#unsuc_sub_title_desc').html('')
+                    break;
+                  case 'send_node_failure':
+                    $('#unsuc_sub_title').html('无法获取NODE积分')
+                    $('#unsuc_sub_title_desc').html('请联系课程助教')
+                    break;
+                  case 'no_wallet_address':
+                    $('#unsuc_sub_title').html('手机号码无效')
+                    $('#unsuc_sub_title_desc').html('请联系课程助教')
+                    break;
+                  default:
+                    break;
+                }
+                $(".sign_bg").show()
+                $("#unsuc_tk").show()
+                $("#giveaway_button").prop( "disabled", false );
+              }
+            },
+            error: function(XmlHttpRequest, textStatus, errorThrown){
+              clearInterval(interval)
+              $(".giveaway_random").html('000')
+              $('#unsuc_sub_title').html('抽奖失败')
+              $('#unsuc_sub_title_desc').html('请联系课程助教')
+              $(".sign_bg").show()
+              $("#unsuc_tk").show()
+              $("#giveaway_button").prop( "disabled", false );
+            }
+          });
+        },
+        errorElement:"font",
+        errorPlacement: function(error, element){
+          error.appendTo(element.parent().find(".tipinfo"));
+        },
+        success: 'valid'
+    });
+  });
