@@ -22,21 +22,21 @@ body{
 	color: white;
 }
 .giveaway_title{
-	font-size: 2.5rem;
-	padding-top: 60px;
+	font-size: 2rem;
+	padding-top: 2rem;
 	color: white;
 	text-align: center;
 }
 .giveaway_area {
 	margin: 30px;
-	height: 150px;
+	height: 8rem;
 	background: white;
 	border-radius: 20px;
 	text-align: center;
 }
 .giveaway_random {
-	line-height: 150px;
-  font-size: 120px;
+	line-height: 8rem;
+  font-size: 6rem;
   color: #4B9CDD;
 }
 .giveaway_term {
@@ -314,6 +314,7 @@ body{
 	top:0;
 }
 @media screen and (max-height: 568px) {
+
 	.logo {
 	    height: 1rem;
 	    margin: 1.4rem 0 0 1rem;
@@ -340,6 +341,16 @@ body{
 	.sign_welcome i {
 	    opacity: 0.6;
 	    margin: 0 0.2rem;
+	}
+	.giveaway_title {
+		font-size: 1.5rem;
+    padding-top: 1.5rem;
+	}
+	.giveaway_area {
+		height: 6rem;
+	}
+	.giveaway_random{
+		line-height: 6rem;
 	}
 }
 @media screen and (min-height: 700px){
