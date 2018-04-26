@@ -2,20 +2,17 @@
   .giveaway_title
     %p.title NODE积分
     %p.title 大放送
-    / %img{:src => "#{image_path('node_logo.png')}"}
-  .giveaway_area
-    %span.giveaway_random 000
   = form_tag giveaway_path, :method => 'post', :class => 'sign_form', :id =>'giveaway_form', :remote => true do
     = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+    .giveaway_area
+      %span.giveaway_random 000
     .giveaway_term
       = text_field_tag :phone, '', :placeholder => "请输入手机号"
       .tipinfo
     .giveaway_button
       %button#giveaway_button.button 立即抽奖
   .tip 注：NODE积分将在本次课程结束后发放
-// 遮罩背景
 .sign_bg{:style => "display: none"}
-// 签到成功弹框
 #suc_tk.sign_tk{:style => "display: none"}
   .sign_suc
     .suc_title 提示
@@ -23,7 +20,6 @@
       %p 恭喜您
       %p#random
     #suc_close.sign_close
-// 签到失败弹框
 #unsuc_tk.sign_tk{:style => "display: none"}
   .sign_unsuc
     .unsuc_title 提示
