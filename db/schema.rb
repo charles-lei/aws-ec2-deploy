@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424065157) do
+ActiveRecord::Schema.define(version: 20180427071827) do
 
   create_table "course_sign_failures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "course_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20180424065157) do
     t.string "received_nodes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_sent", default: false
     t.index ["course_id"], name: "index_course_signs_on_course_id"
     t.index ["student_id"], name: "index_course_signs_on_student_id"
   end
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180424065157) do
     t.integer "nodes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_sent", default: false
     t.index ["course_id"], name: "index_giveaways_on_course_id"
     t.index ["student_id"], name: "index_giveaways_on_student_id"
   end
