@@ -1,0 +1,53 @@
+.row
+  %img{:src=>image_path('node_img.png'), :alt=>'Responsive image', :class=>'img-responsive node_img'}
+.row
+  .feedback_title 区块链原理与开发实战技术
+.row
+  .feedback_subtitle 课程反馈
+.row
+  .rating 推荐指数
+.row
+  %img.asterisk.img-responsive{:id => 'asterisk1', :src=>image_path('empty_star.png'), :alt=>'star'}
+  %img.asterisk.img-responsive{:id => 'asterisk2',:src=>image_path('empty_star.png'), :alt=>'star'}
+  %img.asterisk.img-responsive{:id => 'asterisk3',:src=>image_path('empty_star.png'), :alt=>'star'}
+  %img.asterisk.img-responsive{:id => 'asterisk4',:src=>image_path('empty_star.png'), :alt=>'star'}
+  %img.asterisk.img-responsive{:id => 'asterisk5',:src=>image_path('empty_star.png'), :alt=>'star'}
+.row
+  = form_tag feedback_path, :method => 'post', :class => 'form-horizontal', :id => 'feedback_form', :remote => true do
+    = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
+    = hidden_field_tag :hidStar, :value => 0
+    .form-group
+      = text_area_tag :content, '', {:class => 'content form-control', :placeholder => '填写反馈', :required => true, :maxlength => 200}
+    .form-group
+      = label_tag 'phone', '请输入您的手机号', :class => 'phone'
+      = text_field_tag 'phone', '', {:placeholder => '手机号', :class => 'form-control'}
+    %button.btn.btn-primary{:type => "submit"} 提交
+.tip 注：提交有意义的建议会获得NODE积分哟！
+.sign_bg{:style => "display: none"}
+#suc_tk.sign_tk{:style => "display: none"}
+  .sign_suc
+    .suc_title 提交成功
+    .sign_con
+      %p
+      %p 感谢您的建议！
+    #suc_close.sign_close
+
+:javascript
+  $(document).ready(function(){
+    $(".asterisk").click(function(){
+      var empty_image_path = "#{image_path('empty_star.png')}"
+      var image_path = "#{image_path('star.png')}"
+      $(".asterisk").attr('src', empty_image_path)
+      var star = Number(this.id.charAt(this.id.length - 1))
+      $("#hidStar").val(star)
+      this.src = image_path
+      $(this).prevAll().attr('src', image_path)
+    });
+    $("#feedback_form").bind('ajax:success', function() {
+      $(".sign_bg").show()
+      $("#suc_tk").show()
+    });
+    $("#suc_close").click(function(){
+      $("#suc_tk,.sign_bg").fadeOut(400);
+    });
+  });

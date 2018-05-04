@@ -10,19 +10,16 @@
   font-weight: normal;
   font-style: normal;
 }
-*{padding:0;margin:0;}
-html{width:100%;height: 100%;}
-body{
-	width:100%;
-    height: 100%;
-    font-size: 62.5%;
-    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-    position: relative;
-}
-.sign_wrap {
-	 background: image_url('sign_bg.png')  no-repeat;
-   background-size: 100% 100%;
-}
+// *{padding:0;margin:0;}
+html{width:100%; height: 100%;}
+// body{
+// 	width:100%;
+//     height: 100%;
+//     font-size: 62.5%;
+//     font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+//     position: relative;
+// }
+
 .giveaway_wrap {
 	 height: 100%;
 	 width: 100%;
@@ -33,10 +30,11 @@ body{
 .tip {
 	text-align: center;
 	color: white;
+	font-size: 12px;
 }
 .giveaway_title{
-	font-size: 3rem;
-	padding-top: 5rem;
+	font-size: 2.6rem;
+	padding-top: 4rem;
 	color: white;
 	text-align: center;
 }
@@ -90,10 +88,12 @@ body{
 .rt{
     float: right;
 }
-.sign_wrap{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.welcome_wrap{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: image_url('sign_bg.png')  no-repeat;
+ 	background-size: 100% 100%;
 }
 .logo{
     height: 1rem;
@@ -295,7 +295,7 @@ body{
 	width: 1.4rem;
 	height: 1.4rem;
 	left:50%;
-	bottom:-5.5rem;
+	bottom:-7rem;
 	margin-left: -0.7rem;
 	background: image_url('close.png') no-repeat;
 	background-size: 100% 100%;

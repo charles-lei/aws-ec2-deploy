@@ -17,3 +17,4 @@
 //= require jquery.validate
 //= require validate_expand
 //= require qrcode.min
+//= require bootstrap

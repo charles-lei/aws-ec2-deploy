@@ -1,0 +1,161 @@
+.feedbacks_wrap {
+   height: 100%;
+   width: 100%;
+   background: image_url('feedback_bg.jpg')  no-repeat;
+   background-size: 100% 100%;
+   overflow: hidden;
+}
+.node_img {
+  height: 60px;
+  width: 180px;
+  margin: 20px;
+}
+.feedback_title{ 
+  margin: 20px auto 20px auto;
+  font-size: 20px;
+  color: white;
+}
+.feedback_subtitle {
+    color: white;
+    font-size: 28px;
+    margin: 0 auto;
+}
+.rating{
+  font-size: 16px;
+  color: white;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+.asterisk {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+.asterisk:first-child{
+  margin-left: 40px;
+}
+.form-horizontal {
+  margin: 20px 40px 20px 40px;
+  width: 100%;
+}
+.btn.btn-primary{
+  width: 100%;
+}
+.content{
+  height: 120px;
+  width: 100%;
+}
+.phone {
+  color: white;
+  font-size: 16px;
+}
+
+/*4 4s*/
+@media only screen and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){ 
+  .node_img {
+    height: 40px;
+    width: 120px;
+    margin: 20px;
+  }
+  .feedback_title{ 
+    margin: 0 auto 10px auto;
+    font-size: 16px;
+    color: white;
+  }
+  .feedback_subtitle {
+      color: white;
+      font-size: 20px;
+      margin: 0 auto;
+  }
+  .rating{
+    font-size: 12px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  .asterisk {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .asterisk:first-child{
+    margin-left: 40px;
+  }
+  .form-horizontal {
+    margin: 10px 40px 10px 40px;
+    width: 100%;
+  }
+  .btn.btn-primary{
+    width: 100%;
+  }
+  .content{
+    height: 80px;
+    width: 100%;
+  }
+  .phone {
+    color: white;
+    font-size: 12px;
+  }
+  #phone {
+    font-size: 12px;
+  }
+  .form-control.content {
+    font-size: 12px;
+  }
+}
+/* iphone 5 */
+@media (min-device-width : 320px) and (max-device-width: 568px) and (device-height: 568px) and (-webkit-min-device-pixel-ratio : 2){
+  .node_img {
+    height: 40px;
+    width: 120px;
+    margin: 20px;
+  }
+  .feedback_title{ 
+    margin: 0 auto 10px auto;
+    font-size: 16px;
+    color: white;
+  }
+  .feedback_subtitle {
+      color: white;
+      font-size: 20px;
+      margin: 0 auto;
+  }
+  .rating{
+    font-size: 12px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  .asterisk {
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
+  }
+  .asterisk:first-child{
+    margin-left: 40px;
+  }
+  .form-horizontal {
+    margin: 10px 40px 10px 40px;
+    width: 100%;
+  }
+  .btn.btn-primary{
+    width: 100%;
+  }
+  .content{
+    height: 120px;
+    width: 100%;
+  }
+  .phone {
+    color: white;
+    font-size: 12px;
+  }
+  #phone {
+    font-size: 12px;
+  }
+  .form-control.content {
+    font-size: 12px;
+  }
+}

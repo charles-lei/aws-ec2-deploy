@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'tip', action: :tip, controller: 'welcome'
   get 'giveaway', action: :index, controller: 'giveaway'
   post 'giveaway', action: :create, controller: 'giveaway'
+  resource :feedback, only:[:show, :create]
 end

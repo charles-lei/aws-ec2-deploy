@@ -8,6 +8,8 @@ module ApplicationHelper
       'Node签到'
     elsif params[:controller] == 'giveaway'
       'Node抽奖'
+    elsif params[:controller] == 'feedbacks'
+      '课程反馈'
     end
   end
 end
