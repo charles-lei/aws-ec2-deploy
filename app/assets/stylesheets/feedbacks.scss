@@ -6,12 +6,12 @@
    overflow: hidden;
 }
 .node_img {
-  height: 60px;
-  width: 180px;
-  margin: 20px;
+  height: 40px;
+  width: 120px;
+  margin: 10px;
 }
 .feedback_title{ 
-  margin: 20px auto 20px auto;
+  margin: 10px auto 10px auto;
   font-size: 20px;
   color: white;
 }
@@ -24,13 +24,13 @@
   font-size: 16px;
   color: white;
   margin-left: 40px;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 .asterisk {
   margin-left: 20px;
   margin-top: 10px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .asterisk:first-child{
   margin-left: 40px;
@@ -52,11 +52,11 @@
 }
 
 /*4 4s*/
-@media only screen and (device-height: 480px) and (-webkit-device-pixel-ratio: 2){ 
+@media only screen and (max-device-height: 567px) and (-webkit-device-pixel-ratio: 2){ 
   .node_img {
-    height: 40px;
-    width: 120px;
-    margin: 20px;
+    height: 30px;
+    width: 90px;
+    margin: 10px;
   }
   .feedback_title{ 
     margin: 0 auto 10px auto;
