@@ -1,9 +1,9 @@
 
 /*.tipinfo font.error{background:url(../img/unchecked.png) no-repeat left;padding-left:17px;color:#eb0000;display:inline-block}
 .tipinfo font.valid{background:url(../img/checked.gif) no-repeat left;width:14px;height:13px;overflow:hidden;padding:0;margin:5px 0 0 5px;display:inline-block}*/
-.tipinfo{display:inline-block}
-.tipinfo font.error{padding-left:17px;color:#eb0000;display:inline-block}
-.tipinfo font.valid{width:14px;height:13px;overflow:hidden;padding:0;margin:5px 0 0 5px;display:inline-block}
+.tipinfo{display:inline-block; font-size: 10px;}
+.tipinfo font.error{color:#eb0000;display:inline-block}
+.tipinfo font.valid{width:14px;height:13px;overflow:hidden;padding:0;margin:2px 0 2px 0px;display:inline-block}
 .Button{position:relative;display:inline-block;padding:.45em .825em .45em;text-align:center;line-height:1em;border:1px solid transparent;cursor:pointer;border-radius:.3em;-moz-border-radius:.3em;-webkit-border-radius:.3em;-moz-transition-property:color,-moz-box-shadow,text-shadow;-moz-transition-duration:.05s;-moz-transition-timing-function:ease-in-out;-webkit-transition-property:color,-webkit-box-shadow,text-shadow;-webkit-transition-duration:.05s;-webkit-transition-timing-function:ease-in-out;box-shadow:0 1px rgba(255,255,255,.8),inset 0 1px rgba(255,255,255,.35);-moz-box-shadow:0 1px rgba(255,255,255,.8),inset 0 1px rgba(255,255,255,.35);-webkit-box-shadow:0 1px rgba(255,255,255,.8),inset 0 1px rgba(255,255,255,.35)}
 .Button:hover{text-decoration:none}
 .Button strong{position:relative;z-index:2}
