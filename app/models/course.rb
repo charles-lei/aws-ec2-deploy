@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
   has_many :course_signs
   has_many :giveaways
-  CURRENT_COURSE = 5
+  CURRENT_COURSE = 6
 end
