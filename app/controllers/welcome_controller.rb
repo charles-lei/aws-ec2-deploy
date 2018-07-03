@@ -1,9 +1,9 @@
 class WelcomeController < ApplicationController
   def index
-    # p Rails.env
-    # if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
-    #   redirect_to tip_path 
-    # end
+    p Rails.env
+    if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
+      redirect_to tip_path 
+    end
   end
 
   def tip
