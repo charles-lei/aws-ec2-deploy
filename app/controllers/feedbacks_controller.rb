@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    student = Student.find_by(:phone => params[:phone])
+    student = Student.find_or_create_by(:phone => params[:phone])
     Feedback.create(:student => student, :stars => params[:hidStar], :content => params[:content])
     render :json => { result: 0, message: 'success'}, status: 200
   end

@@ -1,9 +1,9 @@
 class WelcomeController < ApplicationController
   def index
-    p Rails.env
-    if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
-      redirect_to tip_path 
-    end
+    # p Rails.env
+    # if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
+    #   redirect_to tip_path 
+    # end
   end
 
   def tip
@@ -16,10 +16,10 @@ class WelcomeController < ApplicationController
 
   def signin
     result, message = 0, 'success'
-    send_nodes_count = 700
-    student = Student.find_by(:phone => params[:phone])
+    send_nodes_count = 350
+    student = Student.find_or_create_by(:phone => params[:phone])
 
-    if student && student.wallet_address.present?
+    if student
       p student
       course_sign = student&.course_signs&.find_by(:course_id => Course::CURRENT_COURSE)
       if course_sign

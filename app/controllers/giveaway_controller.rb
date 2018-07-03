@@ -5,9 +5,9 @@ class GiveawayController < ApplicationController
   
   def create
     result, message = 0, 'success'
-    student = Student.find_by(:phone => params[:phone])
+    student = Student.find_or_create_by(:phone => params[:phone])
 
-    if student && student.wallet_address.present?
+    if student
       p student
       giveaway = student&.giveaways&.find_by(:course_id => Course::CURRENT_COURSE)
       if giveaway
