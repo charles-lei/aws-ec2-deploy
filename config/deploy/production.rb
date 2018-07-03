@@ -49,12 +49,12 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-server "node.meowtechnology.com",
-  user: "ubuntu",
+server "54.223.212.226",
+  user: "ec2-user",
   roles: %w{web app db},
   ssh_options: {
-    user: "ubuntu", # overrides user setting above
-    keys: %w(~/.ssh/stockholmDev1221.pem),
+    user: "ec2-user", # overrides user setting above
+    keys: %w(~/.ssh/nodekey.pem),
     forward_agent: false,
     auth_methods: %w(publickey)
     # password: "please use keys"

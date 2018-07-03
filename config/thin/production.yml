@@ -1,9 +1,9 @@
 address: 0.0.0.0  
-pid: /home/ubuntu/node_acclerate/shared/tmp/pids/thin.pid  
+pid: /home/ec2-user/node_acclerate/shared/tmp/pids/thin.pid  
 wait: 30  
 port: 3000  
 timeout: 30  
-log: /home/ubuntu/node_acclerate/shared/log/thin.log  
+log: /home/ec2-user/node_acclerate/shared/log/thin.log  
 max_conns: 1024  
 require: []  
   
@@ -11,4 +11,4 @@ environment: production
 max_persistent_conns: 512  
 servers: 1 
 daemonize: true  
-chdir: /home/ubuntu/node_acclerate/current
+chdir: /home/ec2-user/node_acclerate/current
