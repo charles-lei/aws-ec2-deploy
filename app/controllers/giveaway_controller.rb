@@ -5,7 +5,7 @@ class GiveawayController < ApplicationController
   
   def create
     result, message = 0, 'success'
-    student = Student.find_or_create_by(:phone => params[:phone])
+    student = Student.find_by(:phone => params[:phone])
 
     if student
       p student
