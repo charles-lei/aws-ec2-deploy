@@ -34,7 +34,7 @@ html{width:100%; height: 100%;}
 }
 .giveaway_title{
 	font-size: 2.6rem;
-	padding-top: 4rem;
+	padding-top: 2rem;
 	color: white;
 	text-align: center;
 }
@@ -141,7 +141,10 @@ html{width:100%; height: 100%;}
 }
 .sign_form{
 	width:14rem;
-	margin:4.6rem auto 3rem auto;
+	margin: 4.6rem auto 3rem auto;
+}
+#giveaway_form{
+	margin-top: 2rem;
 }
 .sign_term,
 .sign_button{
@@ -328,7 +331,8 @@ html{width:100%; height: 100%;}
 	left: 0;
 	top:0;
 }
-@media screen and (max-height: 568px) {
+
+@media screen and (max-device-height: 568px) {
 
 	.logo {
 	    height: 1rem;
@@ -349,6 +353,9 @@ html{width:100%; height: 100%;}
 		margin:5rem auto 2.5rem auto;
 		width: 13rem;
 	}
+	#giveaway_form{
+		margin-top: 2rem;
+	}
 	.sign_term, .sign_button{height: 2.2rem;}
 	.sign_term label{margin: 0.4rem 0.7rem 0.4rem 0.9rem;}
 	.sign_welcome{
@@ -362,11 +369,15 @@ html{width:100%; height: 100%;}
 		font-size: 2rem;
     padding-top: 2rem;
 	}
+	.giveaway_title .title {
+		font-family: 'fzhp';
+		margin-bottom: 0;
+	}
 	.giveaway_area {
-		height: 8rem;
+		height: 6rem;
 	}
 	.giveaway_random{
-		line-height: 8rem;
+		line-height: 6rem;
 	}
 }
 @media screen and (min-height: 700px){
