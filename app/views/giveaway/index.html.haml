@@ -1,6 +1,6 @@
 .giveaway_wrap
   .giveaway_title
-    %p.title NODE积分
+    %p.title Node积分
     %p.title 大放送
   = form_tag giveaway_path, :method => 'post', :class => 'sign_form', :id =>'giveaway_form', :remote => true do
     = tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token)
@@ -11,7 +11,7 @@
       .tipinfo
     .giveaway_button
       %button#giveaway_button.button 立即抽奖
-  .tip 注：NODE积分将在本次课程结束后发放
+  .tip 注：Node积分将在本次课程结束后发放
 .sign_bg{:style => "display: none"}
 #suc_tk.sign_tk{:style => "display: none"}
   .sign_suc
