@@ -39,7 +39,10 @@
       var message = event.detail[0].message
       var wallet_address = event.detail[0].wallet_address
       if(result == 0) {
-        $("#message").html('您的座位号是' + wallet_address)
+        if(wallet_address !=== '主桌') {
+          wallet_address = wallet_address + '号'
+        }
+        $("#message").html('您的桌号是' + wallet_address)
         $(".sign_bg").show()
         $("#suc_tk").show()
       } else {

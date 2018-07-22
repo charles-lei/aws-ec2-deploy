@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def title
     if params[:controller] == 'welcome'
-      'Node签到'
+      '答谢宴签到'
     elsif params[:controller] == 'giveaway'
       'Node抽奖'
     elsif params[:controller] == 'feedbacks'
