@@ -4,25 +4,25 @@
   .sign_title
     %img{:src => "#{image_path('logo.png')}"}
   .sign_line
-  .sign_text
+  .sign_text.hide
     %p.title 《区块链原理与应用》
     %p.desc 时间：7月10日-7月13日 19:00-21:00
     %p.desc 地点：西安交通大学（兴庆校区）主楼D205
   = form_tag signin_path, :method => 'post', :class => 'sign_form', :id =>'signForm', :remote => true do
+    .tipinfo
     .sign_term
       = label_tag :phone, '', {class: "sign_phone"}
       = text_field_tag :phone, '', :placeholder => "请输入手机号"
-      .tipinfo
     .sign_button
       %button#sign_button 签到
-  .tip 注：Node积分将在本次课程结束后发放
+  .tip.hide 注：Node积分将在本次课程结束后发放
 .sign_bg{:style => "display: none"}
 #suc_tk.sign_tk{:style => "display: none"}
   .sign_suc
     .suc_title 签到成功
     .sign_con
-      %p 恭喜您
-      %p 获得350 Node积分
+      %p 尊敬的客户
+      %p#message
     #suc_close.sign_close
 #unsuc_tk.sign_tk{:style => "display: none"}
   .sign_unsuc
@@ -39,6 +39,7 @@
       var message = event.detail[0].message
       var wallet_address = event.detail[0].wallet_address
       if(result == 0) {
+        $("#message").html('您的座位号是' + wallet_address)
         $(".sign_bg").show()
         $("#suc_tk").show()
       } else {
@@ -48,12 +49,12 @@
             $('#unsuc_sub_title_desc').html('')
             break;
           case 'send_node_failure':
-            $('#unsuc_sub_title').html('无法获取Node积分')
-            $('#unsuc_sub_title_desc').html('请联系课程助教')
+            $('#unsuc_sub_title').html('签到失败')
+            $('#unsuc_sub_title_desc').html('请联系工作人员')
             break;
           case 'no_wallet_address':
             $('#unsuc_sub_title').html('手机号码无效')
-            $('#unsuc_sub_title_desc').html('请联系课程助教')
+            $('#unsuc_sub_title_desc').html('请联系工作人员')
             break;
           default:
             break;
@@ -101,7 +102,7 @@
         },
         errorElement:"font",
         errorPlacement: function(error, element){
-            error.appendTo(element.parent().find(".tipinfo"));
+            error.appendTo(element.parent().parent().find(".tipinfo"));
         },success:"valid"
     });
   });

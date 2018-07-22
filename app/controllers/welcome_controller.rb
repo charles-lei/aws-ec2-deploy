@@ -1,9 +1,9 @@
 class WelcomeController < ApplicationController
   def index
-    p Rails.env
-    if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
-      redirect_to tip_path 
-    end
+    # p Rails.env
+    # if params[:timestamp].blank? || params[:timestamp].to_i < Time.now.to_i - 60
+    #   redirect_to tip_path 
+    # end
   end
 
   def tip
@@ -21,9 +21,10 @@ class WelcomeController < ApplicationController
 
     if student
       p student
+      
       course_sign = student&.course_signs&.find_by(:course_id => Course::CURRENT_COURSE)
       if course_sign
-        result, message = 1, 'already_signed'
+        # result, message = 1, 'already_signed'
       else
         p "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"
         sender_result = true#system "node contracts.js #{student.wallet_address} #{send_nodes_count} #{Rails.env=='production' ? 'mainnet' : 'testnet'}"

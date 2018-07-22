@@ -5,7 +5,7 @@ set :application, "node_acclerate"
 set :repo_url, "https://github.com/charles-lei/aws-ec2-deploy.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/ec2-user/node_acclerate"

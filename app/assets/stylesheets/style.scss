@@ -19,7 +19,9 @@ html{width:100%; height: 100%;}
 //     font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 //     position: relative;
 // }
-
+.hide {
+	visibility: hidden;
+}
 .giveaway_wrap {
 	 height: 100%;
 	 width: 100%;
@@ -141,7 +143,7 @@ html{width:100%; height: 100%;}
 }
 .sign_form{
 	width:14rem;
-	margin: 4.6rem auto 3rem auto;
+	margin: 10.6rem auto 3rem auto;
 }
 #giveaway_form{
 	margin-top: 2rem;
@@ -180,7 +182,7 @@ html{width:100%; height: 100%;}
 	border:none;
 	background: transparent;
 	outline: none;
-	color: #fff;
+	color: black;
 }
 .sign_button{
 	height: 2.5rem;
@@ -203,23 +205,23 @@ html{width:100%; height: 100%;}
 }
 
 .sign_term input::input-placeholder {
-    color: #fff;
+    color: gray;
 }
  
 .sign_term input::-webkit-input-placeholder {
-    color: #fff;
+    color: gray;
 }
  
 .sign_term input:-ms-input-placeholder {
-    color: #fff;
+    color: gray;
 }
  
 .sign_term input:-moz-placeholder {
-    color: #fff;
+    color: gray;
 }
  
 .sign_term input::-moz-placeholder {
-   color: #fff;
+   color: gray;
 }
 .sign_welcome{
 	text-align: center;
@@ -350,7 +352,7 @@ html{width:100%; height: 100%;}
 	}
 	.sign_text p{margin-bottom: 0.3rem}
 	.sign_form{
-		margin:5rem auto 2.5rem auto;
+		margin: 8rem auto 2.5rem auto;
 		width: 13rem;
 	}
 	#giveaway_form{
@@ -380,7 +382,7 @@ html{width:100%; height: 100%;}
 		line-height: 6rem;
 	}
 }
-@media screen and (min-height: 700px){
+@media screen and (device-height: 1024px){
 	.logo {
    		margin:2rem 0 0 1.2rem;
 	}
@@ -394,9 +396,21 @@ html{width:100%; height: 100%;}
 	}
 	.sign_form {
 	    width: 15rem;
-	    margin: 7.6rem auto 4rem auto;
+	    margin: 16rem auto 4rem auto;
 	}
 	.sign_term input{
 		width: 12rem;
+	}
+}
+@media screen and (device-height: 1366px){
+	.sign_form {
+	    width: 15rem;
+	    margin: 40rem auto 4rem auto;
+	}
+}
+@media screen and (device-height: 812px){
+	.sign_form {
+	    width: 15rem;
+	    margin: 14rem auto 4rem auto;
 	}
 }
