@@ -5,9 +5,9 @@
     %img{:src => "#{image_path('logo.png')}"}
   .sign_line
   .sign_text
-    %p.title 《区块链原理与应用》
-    %p.desc 时间：7月10日-7月13日 19:00-21:00
-    %p.desc 地点：西安交通大学（兴庆校区）主楼D205
+    %p.title{:style => "visibility:hidden;"} Node高校区块链课程
+    %p.desc 
+    %p.desc 
   = form_tag signin_path, :method => 'post', :class => 'sign_form', :id =>'signForm', :remote => true do
     .sign_term
       = label_tag :phone, '', {class: "sign_phone"}
